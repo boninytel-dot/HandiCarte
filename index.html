@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HandiCarte — Politique de confidentialité et CGU</title>
+<meta name="description" content="Politique de confidentialité et conditions générales d'utilisation de l'application Android HandiCarte, éditée par BoninyDev.">
+<style>
+  :root {
+    --primary: #1A237E;
+    --primary-dark: #0D1B7D;
+    --accent: #00897B;
+    --bg: #F5F5F5;
+    --surface: #FFFFFF;
+    --text: #212121;
+    --secondary-text: #5B6472;
+    --border: #E0E0E0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #121212;
+      --surface: #1E1E1E;
+      --text: #F5F5F5;
+      --secondary-text: #BDBDBD;
+      --border: #333333;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+  }
+
+  header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: #fff;
+    padding: 34px 20px 44px;
+    text-align: center;
+  }
+
+  header h1 { margin: 0; font-size: 1.75rem; letter-spacing: 0.02em; }
+  header p  { margin: 8px 0 0; color: rgba(255,255,255,0.82); font-size: 0.95rem; }
+
+  .container { max-width: 780px; margin: 0 auto; padding: 8px 20px 64px; }
+
+  /* Selecteur de langue sans JavaScript, pilote par des radios masquees. */
+  input[name="lang"] {
+    position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  .lang-switch {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+    margin: -24px auto 28px; max-width: 780px; padding: 0 20px;
+  }
+
+  .lang-switch label {
+    flex: 0 1 auto; min-width: 104px; text-align: center; padding: 10px 16px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 10px; cursor: pointer; font-weight: 600;
+    color: var(--secondary-text);
+    transition: background .15s, color .15s, border-color .15s;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  }
+
+  .lang-switch label:hover { border-color: var(--primary); }
+
+  input[name="lang"]:focus-visible ~ .lang-switch label { outline: 2px solid var(--accent); }
+
+  #lang-fr:checked ~ .lang-switch label[for="lang-fr"],
+  #lang-en:checked ~ .lang-switch label[for="lang-en"],
+  #lang-de:checked ~ .lang-switch label[for="lang-de"],
+  #lang-es:checked ~ .lang-switch label[for="lang-es"],
+  #lang-it:checked ~ .lang-switch label[for="lang-it"],
+  #lang-nl:checked ~ .lang-switch label[for="lang-nl"],
+  #lang-pt:checked ~ .lang-switch label[for="lang-pt"] {
+    background: var(--primary); color: #fff; border-color: var(--primary);
+  }
+
+  #content-fr, #content-en, #content-de, #content-es, #content-it, #content-nl, #content-pt { display: none; }
+  #lang-fr:checked ~ .container #content-fr,
+  #lang-en:checked ~ .container #content-en,
+  #lang-de:checked ~ .container #content-de,
+  #lang-es:checked ~ .container #content-es,
+  #lang-it:checked ~ .container #content-it,
+  #lang-nl:checked ~ .container #content-nl,
+  #lang-pt:checked ~ .container #content-pt { display: block; }
+
+  .card {
+    background: var(--surface); border-radius: 12px; border: 1px solid var(--border);
+    padding: 22px 26px; margin-bottom: 18px;
+  }
+
+  .card h2 {
+    margin: 0 0 4px; font-size: 1.3rem; color: var(--primary);
+    border-bottom: 2px solid var(--accent); padding-bottom: 10px;
+  }
+
+  @media (prefers-color-scheme: dark) { .card h2 { color: #9FA8DA; } }
+
+  .card h3 { margin: 26px 0 6px; font-size: 1rem; letter-spacing: .01em; }
+  .card p  { margin: 8px 0; }
+  .card ul { margin: 8px 0; padding-left: 22px; }
+  .card li { margin: 4px 0; }
+
+  a { color: var(--accent); overflow-wrap: anywhere; }
+
+  footer {
+    text-align: center; padding: 0 20px 48px;
+    color: var(--secondary-text); font-size: .9rem;
+  }
+
+  @media (max-width: 480px) {
+    .card { padding: 18px 16px; }
+    .lang-switch label { min-width: 88px; padding: 9px 12px; font-size: .9rem; }
+  }
+</style>
+</head>
+<body>
+
+<input type="radio" name="lang" id="lang-fr" checked>
+<input type="radio" name="lang" id="lang-en">
+<input type="radio" name="lang" id="lang-de">
+<input type="radio" name="lang" id="lang-es">
+<input type="radio" name="lang" id="lang-it">
+<input type="radio" name="lang" id="lang-nl">
+<input type="radio" name="lang" id="lang-pt">
+
+<header>
+  <h1>HandiCarte</h1>
+  <p>Politique de confidentialité et conditions générales d'utilisation</p>
+</header>
+
+<div class="lang-switch">
+  <label for="lang-fr">Français</label>
+  <label for="lang-en">English</label>
+  <label for="lang-de">Deutsch</label>
+  <label for="lang-es">Español</label>
+  <label for="lang-it">Italiano</label>
+  <label for="lang-nl">Nederlands</label>
+  <label for="lang-pt">Português</label>
+</div>
+
+<div class="container">
+  <section id="content-fr" lang="fr">
+    <div class="card">
+      <h2>Politique de confidentialité</h2>
+<p>Dernière mise à jour : 20 septembre 2026</p>
+<h3>1. ÉDITEUR ET OBJET</h3>
+<p>HandiCarte (« l'Application ») est éditée par BoninyDev, développeur indépendant établi en France, responsable du traitement au sens du RGPD. Contact : contact@boninydev.com</p>
+<p>L'Application permet de photographier, classer et consulter, à des fins strictement personnelles, des reproductions numériques de cartes et documents liés au handicap. La présente politique explique quelles informations sont traitées et comment.</p>
+<p>En résumé : vos cartes, vos photos et vos informations restent sur votre téléphone. BoninyDev n'a ni serveur, ni compte utilisateur, ni outil de mesure d'audience, et n'y accède jamais. La seule donnée qui quitte l'appareil concerne l'affichage des publicités par Google AdMob, et uniquement si vous y consentez.</p>
+<h3>2. DONNÉES ENREGISTRÉES SUR VOTRE APPAREIL</h3>
+<p>L'Application enregistre, exclusivement dans l'espace de stockage privé de votre appareil :</p>
+<ul><li>les informations de vos cartes : type, titulaire, numéro, date d'expiration, notes ;</li><li>les photographies recto et verso que vous prenez ou importez ;</li><li>vos préférences : langue, pays, contraste élevé, grand texte, synthèse vocale.</li></ul>
+<p>Ces données ne sont ni collectées, ni transmises, ni consultées par BoninyDev ou par un tiers. Elles ne quittent votre appareil que sur votre action volontaire : export, partage d'un PDF, recadrage d'une photo.</p>
+<h3>3. DONNÉES DE SANTÉ</h3>
+<p>Les cartes que vous enregistrez (carte mobilité inclusion, RQTH, notification AAH, cartes de stationnement et équivalents étrangers) révèlent une situation de handicap. Ce sont des données sensibles au sens de l'article 9 du RGPD.</p>
+<p>C'est la raison pour laquelle l'Application a été conçue sans aucun envoi de ces données : leur traitement est purement local, sous votre seul contrôle, dans le cadre de l'exception prévue à l'article 2, paragraphe 2, point c) du RGPD (usage strictement personnel et domestique). La sauvegarde automatique d'Android vers Google Drive est volontairement désactivée afin que ces données ne soient pas copiées hors de votre appareil à votre insu.</p>
+<h3>4. PUBLICITÉS (GOOGLE ADMOB) ET CONSENTEMENT</h3>
+<p>L'Application affiche une bannière publicitaire fournie par Google AdMob sur l'écran d'accueil. C'est ce qui permet de la proposer gratuitement. Aucune publicité n'est affichée sur l'écran de consultation d'une carte, ni sur les écrans de saisie.</p>
+<p>Pour diffuser ces annonces, Google AdMob et ses partenaires peuvent collecter :</p>
+<ul><li>l'identifiant publicitaire de votre appareil ;</li><li>votre adresse IP et des informations générales sur votre appareil ;</li><li>des données d'utilisation à des fins de mesure et, le cas échéant, de personnalisation ;</li><li>sur les appareils Android récents, des signaux transmis via les API de confidentialité publicitaire d'Android (Privacy Sandbox).</li></ul>
+<p>Ces informations sont collectées et traitées par Google en qualité de responsable de traitement distinct, conformément à sa propre politique : <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Consentement : si vous résidez dans l'Espace économique européen, au Royaume-Uni ou en Suisse, un formulaire de consentement s'affiche au premier lancement. Vous choisissez librement d'accepter ou de refuser les publicités personnalisées ; un refus n'empêche pas d'utiliser l'Application ni aucune de ses fonctions. Aucune donnée de vos cartes n'est jamais transmise aux services publicitaires.</p>
+<p>Vous pouvez à tout moment modifier vos préférences publicitaires dans les paramètres de votre appareil Android, sous Confidentialité puis Publicité (réinitialiser ou supprimer l'identifiant publicitaire).</p>
+<h3>5. AUTORISATIONS DEMANDÉES</h3>
+<ul><li>Appareil photo : pour photographier vos cartes.</li><li>Photos : pour importer une image existante depuis votre galerie.</li><li>Internet : pour charger la bannière publicitaire et ouvrir un lien externe dans votre navigateur (page de don).</li><li>Identifiant publicitaire : utilisé par Google AdMob pour la diffusion et la mesure des publicités.</li></ul>
+<p>Aucune autorisation de localisation, de contacts, de microphone ou de téléphonie n'est demandée.</p>
+<h3>6. EXPORT, PARTAGE ET SAUVEGARDE</h3>
+<p>L'Application permet d'exporter vos données dans un fichier JSON, ou de générer le PDF d'une carte pour le partager. Ces opérations sont déclenchées uniquement par vous : vous choisissez le fichier, sa destination et ses destinataires. BoninyDev n'a accès ni à ces fichiers ni à leur contenu.</p>
+<p>Attention : un fichier exporté contient vos photos de cartes en clair. Conservez-le dans un emplacement sûr et ne le transmettez qu'à des personnes de confiance.</p>
+<h3>7. CONSERVATION ET SUPPRESSION</h3>
+<p>Vos données restent sur votre appareil tant que l'Application est installée. Vous pouvez à tout moment :</p>
+<ul><li>modifier ou supprimer une carte (la suppression efface aussi ses photos) ;</li><li>supprimer toutes les cartes depuis les Paramètres ;</li><li>désinstaller l'Application, ce qui efface définitivement l'ensemble des données associées.</li></ul>
+<h3>8. SÉCURITÉ</h3>
+<p>Les données sont protégées par le bac à sable applicatif d'Android, qui empêche les autres applications d'y accéder. Il est vivement recommandé de verrouiller votre appareil (code, empreinte, reconnaissance faciale) : toute personne qui déverrouille votre téléphone pourrait consulter vos cartes.</p>
+<h3>9. VOS DROITS</h3>
+<p>Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité prévus par le RGPD. BoninyDev ne détenant aucune donnée vous concernant sur un serveur, ces droits s'exercent directement et immédiatement par vous, localement, via les fonctions de modification, de suppression et d'export de l'Application.</p>
+<p>Pour les données traitées par Google dans le cadre des publicités, ces droits s'exercent auprès de Google. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr) ou de l'autorité de contrôle de votre pays de résidence.</p>
+<h3>10. MINEURS</h3>
+<p>L'Application n'est pas destinée aux enfants de moins de 13 ans et ne propose aucune fonction de communication, de réseau social ou de mise en relation. Son utilisation par un mineur est possible, idéalement sous la supervision d'un parent ou tuteur.</p>
+<h3>11. MODIFICATIONS</h3>
+<p>Cette politique peut évoluer pour suivre les mises à jour de l'Application ou de la réglementation. La version en vigueur est celle accessible depuis Paramètres puis Politique de confidentialité, ainsi qu'à l'adresse suivante :</p>
+<p><a href="https://boninytel-dot.github.io/HandiCarte/">https://boninytel-dot.github.io/HandiCarte/</a></p>
+<h3>12. CONTACT</h3>
+<p>Pour toute question relative à cette politique : contact@boninydev.com</p>
+    </div>
+    <div class="card">
+      <h2>Conditions Générales d'Utilisation</h2>
+<p>Dernière mise à jour : 20 septembre 2026</p>
+<h3>1. ÉDITEUR</h3>
+<p>L'application HandiCarte (« l'Application ») est développée et éditée par BoninyDev, développeur indépendant établi en France. Contact : contact@boninydev.com</p>
+<p>Les présentes Conditions Générales d'Utilisation (« CGU ») régissent l'accès et l'utilisation de l'Application.</p>
+<h3>2. OBJET DE L'APPLICATION</h3>
+<p>HandiCarte est un outil permettant de photographier, classer et consulter, à des fins strictement personnelles, des reproductions numériques de cartes ou documents liés au handicap (carte mobilité inclusion, carte de stationnement, RQTH, AAH, et équivalents étrangers).</p>
+<h3>3. ACCEPTATION</h3>
+<p>L'installation et l'utilisation de l'Application impliquent l'acceptation pleine et entière des présentes CGU ainsi que de la Politique de Confidentialité. Si vous n'acceptez pas ces conditions, vous ne devez pas utiliser l'Application.</p>
+<h3>4. ⚠ AVERTISSEMENT ESSENTIEL — NATURE NON OFFICIELLE DES CARTES NUMÉRIQUES</h3>
+<p>4.1 HandiCarte est exclusivement un outil de stockage et de consultation personnels. Les photographies de cartes, badges, justificatifs ou documents administratifs affichées dans l'Application NE CONSTITUENT EN AUCUN CAS DES DOCUMENTS OFFICIELS et ne sont ni des duplicatas, ni des copies certifiées conformes, ni des équivalents juridiques des documents originaux.</p>
+<p>4.2 Ces reproductions N'ONT AUCUNE VALEUR PROBANTE, ADMINISTRATIVE OU LÉGALE. Elles n'engagent ni la responsabilité des organismes émetteurs des documents originaux (MDPH, CPAM, mairies, préfectures, opérateurs de transport, etc.), ni celle de BoninyDev.</p>
+<p>4.3 L'utilisateur doit IMPÉRATIVEMENT conserver et être en mesure de présenter, à tout moment, les documents ou cartes ORIGINAUX, dans leur format physique délivré par l'autorité ou l'organisme compétent, notamment lorsque la loi, un règlement ou un tiers (commerce, transport, employeur, administration) l'exige.</p>
+<p>4.4 BoninyDev ne pourra en aucun cas être tenu pour responsable :</p>
+<ul><li>du refus d'un tiers d'accepter une reproduction numérique affichée via l'Application en lieu et place du document original ;</li><li>de toute conséquence, financière, administrative, juridique ou autre, résultant de l'utilisation, de la présentation, de la perte ou de l'impossibilité de présenter une reproduction numérique ou un document original ;</li><li>de l'exactitude, de la validité, de la lisibilité, du caractère à jour ou de la date de péremption des informations photographiées ou saisies par l'utilisateur.</li></ul>
+<p>4.5 L'utilisateur est seul responsable de la véracité, de l'exactitude et de la mise à jour des informations qu'il saisit ou photographie, ainsi que de l'usage qu'il en fait, y compris la décision de présenter une reproduction numérique à un tiers.</p>
+<p>4.6 L'Application est un outil d'aide personnelle à la consultation. Elle ne se substitue à aucune démarche administrative, déclaration, justification légale ou obligation incombant à l'utilisateur.</p>
+<h3>5. USAGE PERSONNEL ET LICITE</h3>
+<p>L'Application est réservée à un usage personnel. Il est interdit d'y enregistrer des documents appartenant à un tiers sans son accord, et d'utiliser une reproduction numérique dans le but d'obtenir indûment un droit, un avantage ou une prestation. L'usage frauduleux d'un document administratif est passible de sanctions pénales, dont l'utilisateur serait seul responsable.</p>
+<h3>6. DISPONIBILITÉ ET FONCTIONNEMENT</h3>
+<p>Les fonctions de gestion des cartes fonctionnent hors ligne ; seule la bannière publicitaire nécessite une connexion. BoninyDev s'efforce d'assurer le bon fonctionnement de l'Application mais ne garantit ni une disponibilité ininterrompue, ni l'absence totale d'erreurs, ni la compatibilité avec l'ensemble des appareils et versions d'Android.</p>
+<h3>7. PUBLICITÉ</h3>
+<p>L'Application est gratuite et financée par l'affichage d'une bannière publicitaire fournie par Google AdMob sur l'écran d'accueil. Aucune publicité n'est affichée lors de la consultation d'une carte. Le contenu des annonces est sélectionné par Google et non par BoninyDev, qui ne saurait être tenu responsable des produits ou services promus. Les modalités de collecte des données et de recueil du consentement sont détaillées dans la Politique de Confidentialité.</p>
+<h3>8. LIMITATION DE RESPONSABILITÉ</h3>
+<p>L'Application est fournie « en l'état », sans garantie d'aucune sorte, expresse ou implicite. Dans la limite permise par la loi applicable, BoninyDev ne pourra être tenu responsable :</p>
+<ul><li>de la perte, de la corruption ou de la suppression de données résultant d'une désinstallation, d'une mise à jour, d'un dysfonctionnement de l'appareil ou de toute autre cause ;</li><li>de tout dommage direct ou indirect résultant de l'utilisation, ou de l'impossibilité d'utiliser, l'Application.</li></ul>
+<p>La sauvegarde cloud automatique étant désactivée pour protéger vos données de santé, il est vivement recommandé d'effectuer régulièrement un export depuis le menu principal, en particulier avant de changer de téléphone.</p>
+<p>Aucune stipulation des présentes CGU n'a pour effet d'écarter les droits impératifs reconnus aux consommateurs par la loi de leur pays de résidence, ni la responsabilité de BoninyDev en cas de faute lourde, de dol ou d'atteinte à l'intégrité physique.</p>
+<h3>9. DON AU DÉVELOPPEUR</h3>
+<p>L'Application propose un bouton permettant d'effectuer, sur une base strictement volontaire, un don au développeur via la plate-forme tierce PayPal. Ce don ne donne droit à aucune contrepartie, fonctionnalité supplémentaire ou avantage au sein de l'Application. Il est soumis aux conditions de PayPal, indépendantes de BoninyDev.</p>
+<h3>10. PROPRIÉTÉ INTELLECTUELLE</h3>
+<p>L'Application, son nom, son logo, son design, ses textes et son code source sont la propriété de BoninyDev, à l'exception des composants tiers utilisés sous licence open source. Toute reproduction, modification ou distribution non autorisée est interdite.</p>
+<h3>11. MODIFICATION DES CGU</h3>
+<p>BoninyDev peut modifier les présentes CGU, notamment pour les adapter à l'évolution de l'Application ou de la réglementation. La version applicable est celle accessible depuis Paramètres puis CGU. En cas de modification substantielle, une nouvelle acceptation pourra être demandée.</p>
+<h3>12. DROIT APPLICABLE</h3>
+<p>Les présentes CGU sont soumises au droit français. À défaut de résolution amiable, tout différend relèvera de la compétence des juridictions françaises, sous réserve des règles impératives applicables aux consommateurs dans leur pays de résidence.</p>
+<h3>13. CONTACT</h3>
+<p>Pour toute question relative aux présentes CGU : contact@boninydev.com</p>
+    </div>
+  </section>
+  <section id="content-en" lang="en">
+    <div class="card">
+      <h2>Privacy Policy</h2>
+<p>Last updated: 20 September 2026</p>
+<h3>1. PUBLISHER AND PURPOSE</h3>
+<p>HandiCarte ("the App") is published by BoninyDev, an independent developer based in France, acting as data controller under the GDPR. Contact: contact@boninydev.com</p>
+<p>The App lets you photograph, organise and view digital copies of disability-related cards and documents, strictly for your own personal use. This policy explains what information is processed and how.</p>
+<p>In short: your cards, photos and details stay on your phone. BoninyDev has no server, no user account and no analytics, and never accesses them. The only data leaving your device relates to the display of ads by Google AdMob, and only if you consent to it.</p>
+<h3>2. DATA STORED ON YOUR DEVICE</h3>
+<p>The App stores the following exclusively in your device's private storage:</p>
+<ul><li>your card details: type, holder, number, expiry date, notes;</li><li>the front and back photographs you take or import;</li><li>your preferences: language, country, high contrast, large text, speech.</li></ul>
+<p>This data is never collected, transmitted or accessed by BoninyDev or any third party. It leaves your device only through an action you take yourself: export, sharing a PDF, cropping a photo.</p>
+<h3>3. HEALTH DATA</h3>
+<p>The cards you store (inclusion mobility card, RQTH, AAH notification, parking cards and foreign equivalents) reveal a disability. This is sensitive data within the meaning of Article 9 of the GDPR.</p>
+<p>That is why the App was designed never to send this data anywhere: processing is purely local and under your sole control, within the household exemption of Article 2(2)(c) of the GDPR. Android's automatic backup to Google Drive is deliberately disabled so that this data is not copied off your device without your knowledge.</p>
+<h3>4. ADVERTISING (GOOGLE ADMOB) AND CONSENT</h3>
+<p>The App displays a banner ad provided by Google AdMob on the home screen. This is what allows it to be offered free of charge. No ads are displayed on the card viewing screen or on any data entry screen.</p>
+<p>To serve these ads, Google AdMob and its partners may collect:</p>
+<ul><li>your device's advertising identifier;</li><li>your IP address and general information about your device;</li><li>usage data for measurement and, where applicable, personalisation;</li><li>on recent Android devices, signals sent through Android's advertising privacy APIs (Privacy Sandbox).</li></ul>
+<p>This information is collected and processed by Google as a separate data controller, in accordance with its own policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Consent: if you live in the European Economic Area, the United Kingdom or Switzerland, a consent form is shown on first launch. You are free to accept or refuse personalised advertising; refusing does not prevent you from using the App or any of its features. None of your card data is ever sent to advertising services.</p>
+<p>You can change your advertising preferences at any time in your Android device settings, under Privacy then Ads (reset or delete the advertising ID).</p>
+<h3>5. PERMISSIONS REQUESTED</h3>
+<ul><li>Camera: to photograph your cards.</li><li>Photos: to import an existing image from your gallery.</li><li>Internet: to load the banner ad and to open an external link in your browser (donation page).</li><li>Advertising ID: used by Google AdMob to serve and measure ads.</li></ul>
+<p>No location, contacts, microphone or telephony permission is requested.</p>
+<h3>6. EXPORT, SHARING AND BACKUP</h3>
+<p>The App lets you export your data to a JSON file, or generate a PDF of a card in order to share it. These operations are triggered only by you: you choose the file, its destination and its recipients. BoninyDev has access to neither these files nor their contents.</p>
+<p>Please note: an exported file contains your card photos unencrypted. Keep it in a safe place and only share it with people you trust.</p>
+<h3>7. RETENTION AND DELETION</h3>
+<p>Your data stays on your device for as long as the App is installed. At any time you can:</p>
+<ul><li>edit or delete a card (deleting it also removes its photos);</li><li>delete all cards from Settings;</li><li>uninstall the App, which permanently erases all associated data.</li></ul>
+<h3>8. SECURITY</h3>
+<p>Data is protected by Android's application sandbox, which prevents other apps from accessing it. You are strongly advised to lock your device (PIN, fingerprint, face recognition): anyone who unlocks your phone could view your cards.</p>
+<h3>9. YOUR RIGHTS</h3>
+<p>You have the rights of access, rectification, erasure, restriction, objection and portability provided by the GDPR. As BoninyDev holds no data about you on any server, you exercise these rights directly and immediately, locally, through the App's edit, delete and export functions.</p>
+<p>For data processed by Google in connection with advertising, these rights are exercised with Google. You may also lodge a complaint with the CNIL (www.cnil.fr) or with the supervisory authority of your country of residence.</p>
+<h3>10. CHILDREN</h3>
+<p>The App is not intended for children under 13 and offers no messaging, social network or matchmaking feature. It may be used by a minor, ideally under the supervision of a parent or guardian.</p>
+<h3>11. CHANGES</h3>
+<p>This policy may change to reflect updates to the App or to applicable regulations. The version in force is the one accessible from Settings then Privacy policy, and at the following address:</p>
+<p><a href="https://boninytel-dot.github.io/HandiCarte/">https://boninytel-dot.github.io/HandiCarte/</a></p>
+<h3>12. CONTACT</h3>
+<p>For any question about this policy: contact@boninydev.com</p>
+    </div>
+    <div class="card">
+      <h2>Terms of Use</h2>
+<p>Last updated: 20 September 2026</p>
+<h3>1. PUBLISHER</h3>
+<p>The HandiCarte application ("the App") is developed and published by BoninyDev, an independent developer based in France. Contact: contact@boninydev.com</p>
+<p>These Terms of Use ("Terms") govern access to and use of the App.</p>
+<h3>2. PURPOSE OF THE APP</h3>
+<p>HandiCarte is a tool for photographing, organising and viewing, strictly for personal purposes, digital copies of disability-related cards or documents (inclusion mobility card, parking card, RQTH, AAH, and foreign equivalents).</p>
+<h3>3. ACCEPTANCE</h3>
+<p>Installing and using the App implies full and unreserved acceptance of these Terms and of the Privacy Policy. If you do not accept them, you must not use the App.</p>
+<h3>4. ⚠ ESSENTIAL WARNING — DIGITAL CARDS ARE NOT OFFICIAL DOCUMENTS</h3>
+<p>4.1 HandiCarte is solely a personal storage and viewing tool. Photographs of cards, badges, certificates or administrative documents shown in the App ARE IN NO WAY OFFICIAL DOCUMENTS and are neither duplicates, nor certified copies, nor legal equivalents of the original documents.</p>
+<p>4.2 These reproductions HAVE NO EVIDENTIAL, ADMINISTRATIVE OR LEGAL VALUE. They do not bind the bodies issuing the original documents (MDPH, CPAM, town halls, prefectures, transport operators, etc.), nor BoninyDev.</p>
+<p>4.3 You MUST keep, and be able to present at all times, the ORIGINAL cards or documents in the physical form issued by the competent authority or body, in particular where the law, a regulation or a third party (retailer, transport operator, employer, public body) requires it.</p>
+<p>4.4 BoninyDev may under no circumstances be held liable for:</p>
+<ul><li>a third party's refusal to accept a digital reproduction shown in the App in place of the original document;</li><li>any financial, administrative, legal or other consequence arising from the use, presentation, loss of, or inability to present a digital reproduction or an original document;</li><li>the accuracy, validity, legibility, currency or expiry of the information photographed or entered by the user.</li></ul>
+<p>4.5 You are solely responsible for the truthfulness, accuracy and currency of the information you enter or photograph, and for the use you make of it, including the decision to show a digital reproduction to a third party.</p>
+<p>4.6 The App is a personal viewing aid. It does not replace any administrative procedure, declaration, legal justification or obligation incumbent on the user.</p>
+<h3>5. PERSONAL AND LAWFUL USE</h3>
+<p>The App is for personal use only. You must not store documents belonging to a third party without their agreement, nor use a digital reproduction in order to improperly obtain a right, benefit or service. Fraudulent use of an administrative document is a criminal offence for which the user alone would be responsible.</p>
+<h3>6. AVAILABILITY AND OPERATION</h3>
+<p>Card management works offline; only the banner ad requires a connection. BoninyDev endeavours to keep the App working properly but does not guarantee uninterrupted availability, the complete absence of errors, or compatibility with every device and Android version.</p>
+<h3>7. ADVERTISING</h3>
+<p>The App is free and funded by a banner ad provided by Google AdMob on the home screen. No advertising is shown while viewing a card. Ad content is selected by Google, not by BoninyDev, which cannot be held responsible for the products or services promoted. Data collection and consent are detailed in the Privacy Policy.</p>
+<h3>8. LIMITATION OF LIABILITY</h3>
+<p>The App is provided "as is", without warranty of any kind, express or implied. To the extent permitted by applicable law, BoninyDev may not be held liable for:</p>
+<ul><li>the loss, corruption or deletion of data resulting from an uninstall, an update, a device malfunction or any other cause;</li><li>any direct or indirect damage resulting from the use of, or inability to use, the App.</li></ul>
+<p>As automatic cloud backup is disabled to protect your health data, you are strongly advised to export your data regularly from the main menu, especially before changing phone.</p>
+<p>Nothing in these Terms excludes the mandatory consumer rights granted by the law of your country of residence, nor BoninyDev's liability in case of gross negligence, wilful misconduct or personal injury.</p>
+<h3>9. DONATION TO THE DEVELOPER</h3>
+<p>The App offers a button allowing a strictly voluntary donation to the developer through the third-party platform PayPal. This donation grants no consideration, additional feature or advantage within the App. It is subject to PayPal's own terms, independent of BoninyDev.</p>
+<h3>10. INTELLECTUAL PROPERTY</h3>
+<p>The App, its name, logo, design, texts and source code are the property of BoninyDev, with the exception of third-party components used under open source licences. Any unauthorised reproduction, modification or distribution is prohibited.</p>
+<h3>11. CHANGES TO THE TERMS</h3>
+<p>BoninyDev may amend these Terms, in particular to reflect changes to the App or to applicable regulations. The applicable version is the one accessible from Settings then Terms of Use. In the event of a substantial change, renewed acceptance may be requested.</p>
+<h3>12. GOVERNING LAW</h3>
+<p>These Terms are governed by French law. Failing an amicable settlement, any dispute shall fall within the jurisdiction of the French courts, subject to the mandatory rules applicable to consumers in their country of residence.</p>
+<h3>13. CONTACT</h3>
+<p>For any question about these Terms: contact@boninydev.com</p>
+    </div>
+  </section>
+  <section id="content-de" lang="de">
+    <div class="card">
+      <h2>Datenschutzerklärung</h2>
+<p>Letzte Aktualisierung: 20. September 2026</p>
+<h3>1. ANBIETER UND ZWECK</h3>
+<p>HandiCarte („die App") wird von BoninyDev herausgegeben, einem unabhängigen Entwickler mit Sitz in Frankreich, der als Verantwortlicher im Sinne der DSGVO handelt. Kontakt: contact@boninydev.com</p>
+<p>Mit der App können Sie digitale Kopien von behinderungsbezogenen Ausweisen und Dokumenten ausschließlich zum persönlichen Gebrauch fotografieren, ordnen und ansehen. Diese Erklärung beschreibt, welche Informationen verarbeitet werden und wie.</p>
+<p>Kurz gesagt: Ihre Ausweise, Fotos und Angaben bleiben auf Ihrem Telefon. BoninyDev betreibt weder Server noch Benutzerkonten noch Analysewerkzeuge und greift niemals darauf zu. Die einzigen Daten, die das Gerät verlassen, betreffen die Anzeige von Werbung durch Google AdMob – und nur, wenn Sie einwilligen.</p>
+<h3>2. AUF IHREM GERÄT GESPEICHERTE DATEN</h3>
+<p>Die App speichert ausschließlich im privaten Speicherbereich Ihres Geräts:</p>
+<ul><li>die Angaben zu Ihren Ausweisen: Art, Inhaber, Nummer, Ablaufdatum, Notizen;</li><li>die Vorder- und Rückseitenfotos, die Sie aufnehmen oder importieren;</li><li>Ihre Einstellungen: Sprache, Land, hoher Kontrast, große Schrift, Sprachausgabe.</li></ul>
+<p>Diese Daten werden von BoninyDev oder Dritten weder erhoben noch übermittelt noch eingesehen. Sie verlassen Ihr Gerät nur durch eine von Ihnen ausgelöste Handlung: Export, Teilen einer PDF-Datei, Zuschneiden eines Fotos.</p>
+<h3>3. GESUNDHEITSDATEN</h3>
+<p>Die von Ihnen gespeicherten Ausweise (Schwerbehindertenausweis, Parkausweis und ausländische Entsprechungen) lassen auf eine Behinderung schließen. Es handelt sich um sensible Daten im Sinne von Artikel 9 DSGVO.</p>
+<p>Aus diesem Grund wurde die App so konzipiert, dass diese Daten niemals versendet werden: Die Verarbeitung erfolgt rein lokal und allein unter Ihrer Kontrolle, im Rahmen der Haushaltsausnahme nach Artikel 2 Absatz 2 Buchstabe c DSGVO. Die automatische Android-Sicherung in Google Drive ist bewusst deaktiviert, damit diese Daten nicht ohne Ihr Wissen von Ihrem Gerät kopiert werden.</p>
+<h3>4. WERBUNG (GOOGLE ADMOB) UND EINWILLIGUNG</h3>
+<p>Die App zeigt auf dem Startbildschirm ein von Google AdMob bereitgestelltes Werbebanner. Dadurch kann sie kostenlos angeboten werden. Auf dem Anzeigebildschirm eines Ausweises und in den Eingabemasken wird keine Werbung eingeblendet.</p>
+<p>Zur Auslieferung dieser Anzeigen können Google AdMob und seine Partner erheben:</p>
+<ul><li>die Werbe-ID Ihres Geräts;</li><li>Ihre IP-Adresse und allgemeine Informationen über Ihr Gerät;</li><li>Nutzungsdaten zu Messzwecken und gegebenenfalls zur Personalisierung;</li><li>auf neueren Android-Geräten Signale über die Android-Datenschutz-APIs für Werbung (Privacy Sandbox).</li></ul>
+<p>Diese Informationen werden von Google als eigenständigem Verantwortlichen nach dessen eigener Datenschutzerklärung erhoben und verarbeitet: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Einwilligung: Wenn Sie im Europäischen Wirtschaftsraum, im Vereinigten Königreich oder in der Schweiz wohnen, wird beim ersten Start ein Einwilligungsformular angezeigt. Sie entscheiden frei, ob Sie personalisierte Werbung akzeptieren oder ablehnen; eine Ablehnung hindert Sie nicht an der Nutzung der App oder einzelner Funktionen. Daten Ihrer Ausweise werden niemals an Werbedienste übermittelt.</p>
+<p>Sie können Ihre Werbeeinstellungen jederzeit in den Einstellungen Ihres Android-Geräts unter „Datenschutz" und dann „Werbung" ändern (Werbe-ID zurücksetzen oder löschen).</p>
+<h3>5. ANGEFORDERTE BERECHTIGUNGEN</h3>
+<ul><li>Kamera: zum Fotografieren Ihrer Ausweise.</li><li>Fotos: zum Importieren eines vorhandenen Bildes aus Ihrer Galerie.</li><li>Internet: zum Laden des Werbebanners und zum Öffnen eines externen Links in Ihrem Browser (Spendenseite).</li><li>Werbe-ID: von Google AdMob zur Auslieferung und Messung von Werbung genutzt.</li></ul>
+<p>Es werden keine Berechtigungen für Standort, Kontakte, Mikrofon oder Telefonie angefordert.</p>
+<h3>6. EXPORT, TEILEN UND SICHERUNG</h3>
+<p>Die App ermöglicht den Export Ihrer Daten in eine JSON-Datei oder die Erstellung eines PDF eines Ausweises zum Teilen. Diese Vorgänge lösen ausschließlich Sie aus: Sie wählen die Datei, ihr Ziel und ihre Empfänger. BoninyDev hat weder auf diese Dateien noch auf deren Inhalt Zugriff.</p>
+<p>Achtung: Eine exportierte Datei enthält Ihre Ausweisfotos unverschlüsselt. Bewahren Sie sie sicher auf und geben Sie sie nur an vertrauenswürdige Personen weiter.</p>
+<h3>7. SPEICHERDAUER UND LÖSCHUNG</h3>
+<p>Ihre Daten verbleiben auf Ihrem Gerät, solange die App installiert ist. Sie können jederzeit:</p>
+<ul><li>einen Ausweis bearbeiten oder löschen (beim Löschen werden auch dessen Fotos entfernt);</li><li>alle Ausweise über die Einstellungen löschen;</li><li>die App deinstallieren, wodurch sämtliche zugehörigen Daten endgültig gelöscht werden.</li></ul>
+<h3>8. SICHERHEIT</h3>
+<p>Die Daten sind durch die Android-Anwendungssandbox geschützt, die den Zugriff anderer Apps verhindert. Es wird dringend empfohlen, Ihr Gerät zu sperren (PIN, Fingerabdruck, Gesichtserkennung): Wer Ihr Telefon entsperrt, könnte Ihre Ausweise einsehen.</p>
+<h3>9. IHRE RECHTE</h3>
+<p>Sie haben die in der DSGVO vorgesehenen Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Widerspruch und Datenübertragbarkeit. Da BoninyDev keinerlei Daten über Sie auf einem Server speichert, üben Sie diese Rechte unmittelbar und lokal über die Bearbeitungs-, Lösch- und Exportfunktionen der App aus.</p>
+<p>Für die von Google im Rahmen der Werbung verarbeiteten Daten sind diese Rechte gegenüber Google geltend zu machen. Sie können außerdem Beschwerde bei der Aufsichtsbehörde Ihres Wohnsitzlandes einlegen.</p>
+<h3>10. KINDER</h3>
+<p>Die App richtet sich nicht an Kinder unter 13 Jahren und bietet keine Kommunikations-, Social-Media- oder Kontaktfunktionen. Eine Nutzung durch Minderjährige ist möglich, idealerweise unter Aufsicht eines Elternteils oder Vormunds.</p>
+<h3>11. ÄNDERUNGEN</h3>
+<p>Diese Erklärung kann sich ändern, um Aktualisierungen der App oder der geltenden Vorschriften abzubilden. Maßgeblich ist die Fassung, die über Einstellungen und dann Datenschutzerklärung erreichbar ist, sowie unter:</p>
+<p><a href="https://boninytel-dot.github.io/HandiCarte/">https://boninytel-dot.github.io/HandiCarte/</a></p>
+<h3>12. KONTAKT</h3>
+<p>Bei Fragen zu dieser Erklärung: contact@boninydev.com</p>
+    </div>
+    <div class="card">
+      <h2>Nutzungsbedingungen</h2>
+<p>Letzte Aktualisierung: 20. September 2026</p>
+<h3>1. ANBIETER</h3>
+<p>Die Anwendung HandiCarte („die App") wird von BoninyDev entwickelt und herausgegeben, einem unabhängigen Entwickler mit Sitz in Frankreich. Kontakt: contact@boninydev.com</p>
+<p>Diese Nutzungsbedingungen regeln den Zugang zur App und deren Nutzung.</p>
+<h3>2. ZWECK DER APP</h3>
+<p>HandiCarte ist ein Werkzeug, um digitale Kopien von behinderungsbezogenen Ausweisen oder Dokumenten (Schwerbehindertenausweis, Parkausweis und ausländische Entsprechungen) ausschließlich zu persönlichen Zwecken zu fotografieren, zu ordnen und anzusehen.</p>
+<h3>3. ANNAHME</h3>
+<p>Die Installation und Nutzung der App bedeuten die vollständige und vorbehaltlose Annahme dieser Nutzungsbedingungen sowie der Datenschutzerklärung. Wenn Sie diese nicht akzeptieren, dürfen Sie die App nicht verwenden.</p>
+<h3>4. ⚠ WESENTLICHER HINWEIS — DIGITALE AUSWEISE SIND KEINE AMTLICHEN DOKUMENTE</h3>
+<p>4.1 HandiCarte ist ausschließlich ein Werkzeug zur persönlichen Speicherung und Ansicht. In der App angezeigte Fotos von Ausweisen, Plaketten, Bescheinigungen oder Verwaltungsdokumenten SIND KEINESFALLS AMTLICHE DOKUMENTE und weder Duplikate noch beglaubigte Kopien noch rechtliche Entsprechungen der Originaldokumente.</p>
+<p>4.2 Diese Reproduktionen HABEN KEINEN BEWEIS-, VERWALTUNGS- ODER RECHTSWERT. Sie binden weder die ausstellenden Stellen der Originaldokumente noch BoninyDev.</p>
+<p>4.3 Sie MÜSSEN die ORIGINALausweise oder -dokumente in der von der zuständigen Behörde oder Stelle ausgestellten physischen Form aufbewahren und jederzeit vorlegen können, insbesondere wenn das Gesetz, eine Vorschrift oder ein Dritter (Handel, Verkehrsbetrieb, Arbeitgeber, Behörde) dies verlangt.</p>
+<p>4.4 BoninyDev haftet in keinem Fall für:</p>
+<ul><li>die Weigerung eines Dritten, eine in der App angezeigte digitale Reproduktion anstelle des Originaldokuments zu akzeptieren;</li><li>jegliche finanzielle, verwaltungsrechtliche, rechtliche oder sonstige Folge aus der Nutzung, Vorlage, dem Verlust oder der Unmöglichkeit der Vorlage einer digitalen Reproduktion oder eines Originaldokuments;</li><li>die Richtigkeit, Gültigkeit, Lesbarkeit, Aktualität oder das Ablaufdatum der von der Nutzerin oder dem Nutzer fotografierten oder eingegebenen Angaben.</li></ul>
+<p>4.5 Sie allein sind für die Wahrheit, Richtigkeit und Aktualität der eingegebenen oder fotografierten Angaben sowie für deren Verwendung verantwortlich, einschließlich der Entscheidung, eine digitale Reproduktion Dritten vorzuzeigen.</p>
+<p>4.6 Die App ist eine persönliche Ansichtshilfe. Sie ersetzt kein Verwaltungsverfahren, keine Erklärung, keinen rechtlichen Nachweis und keine Pflicht der Nutzerin oder des Nutzers.</p>
+<h3>5. PERSÖNLICHE UND RECHTMÄSSIGE NUTZUNG</h3>
+<p>Die App ist ausschließlich für den persönlichen Gebrauch bestimmt. Es ist untersagt, Dokumente Dritter ohne deren Zustimmung zu speichern oder eine digitale Reproduktion zu verwenden, um unrechtmäßig ein Recht, einen Vorteil oder eine Leistung zu erlangen. Der missbräuchliche Gebrauch eines amtlichen Dokuments ist strafbar; hierfür ist allein die Nutzerin oder der Nutzer verantwortlich.</p>
+<h3>6. VERFÜGBARKEIT UND BETRIEB</h3>
+<p>Die Ausweisverwaltung funktioniert offline; nur das Werbebanner benötigt eine Verbindung. BoninyDev bemüht sich um den einwandfreien Betrieb der App, garantiert jedoch weder ununterbrochene Verfügbarkeit noch völlige Fehlerfreiheit noch Kompatibilität mit allen Geräten und Android-Versionen.</p>
+<h3>7. WERBUNG</h3>
+<p>Die App ist kostenlos und wird durch ein von Google AdMob bereitgestelltes Werbebanner auf dem Startbildschirm finanziert. Beim Ansehen eines Ausweises wird keine Werbung eingeblendet. Die Inhalte der Anzeigen werden von Google ausgewählt, nicht von BoninyDev, das für die beworbenen Produkte oder Dienstleistungen nicht verantwortlich gemacht werden kann. Einzelheiten zur Datenerhebung und Einwilligung finden Sie in der Datenschutzerklärung.</p>
+<h3>8. HAFTUNGSBESCHRÄNKUNG</h3>
+<p>Die App wird „wie besehen" ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt. Soweit gesetzlich zulässig, haftet BoninyDev nicht für:</p>
+<ul><li>Verlust, Beschädigung oder Löschung von Daten infolge einer Deinstallation, eines Updates, einer Gerätestörung oder aus anderer Ursache;</li><li>unmittelbare oder mittelbare Schäden aus der Nutzung oder Nichtnutzbarkeit der App.</li></ul>
+<p>Da die automatische Cloud-Sicherung zum Schutz Ihrer Gesundheitsdaten deaktiviert ist, wird dringend empfohlen, Ihre Daten regelmäßig über das Hauptmenü zu exportieren, insbesondere vor einem Gerätewechsel.</p>
+<p>Keine Bestimmung dieser Nutzungsbedingungen schließt die zwingenden Verbraucherrechte nach dem Recht Ihres Wohnsitzlandes aus, ebenso wenig die Haftung von BoninyDev bei grober Fahrlässigkeit, Vorsatz oder Verletzung von Leben, Körper und Gesundheit.</p>
+<h3>9. SPENDE AN DEN ENTWICKLER</h3>
+<p>Die App bietet eine Schaltfläche für eine rein freiwillige Spende an den Entwickler über die Drittplattform PayPal. Diese Spende begründet keinen Anspruch auf eine Gegenleistung, zusätzliche Funktionen oder Vorteile innerhalb der App. Es gelten die von BoninyDev unabhängigen Bedingungen von PayPal.</p>
+<h3>10. GEISTIGES EIGENTUM</h3>
+<p>Die App, ihr Name, Logo, Design, ihre Texte und ihr Quellcode sind Eigentum von BoninyDev, mit Ausnahme der unter Open-Source-Lizenzen genutzten Komponenten Dritter. Jede unbefugte Vervielfältigung, Änderung oder Verbreitung ist untersagt.</p>
+<h3>11. ÄNDERUNG DER NUTZUNGSBEDINGUNGEN</h3>
+<p>BoninyDev kann diese Nutzungsbedingungen ändern, insbesondere zur Anpassung an die Weiterentwicklung der App oder der geltenden Vorschriften. Maßgeblich ist die über Einstellungen und dann Nutzungsbedingungen erreichbare Fassung. Bei wesentlichen Änderungen kann eine erneute Zustimmung verlangt werden.</p>
+<h3>12. ANWENDBARES RECHT</h3>
+<p>Diese Nutzungsbedingungen unterliegen französischem Recht. Sofern keine gütliche Einigung erzielt wird, sind die französischen Gerichte zuständig, vorbehaltlich der zwingenden Vorschriften für Verbraucher in deren Wohnsitzland.</p>
+<h3>13. KONTAKT</h3>
+<p>Bei Fragen zu diesen Nutzungsbedingungen: contact@boninydev.com</p>
+    </div>
+  </section>
+  <section id="content-es" lang="es">
+    <div class="card">
+      <h2>Política de privacidad</h2>
+<p>Última actualización: 20 de septiembre de 2026</p>
+<h3>1. EDITOR Y FINALIDAD</h3>
+<p>HandiCarte («la Aplicación») está editada por BoninyDev, desarrollador independiente establecido en Francia, responsable del tratamiento en el sentido del RGPD. Contacto: contact@boninydev.com</p>
+<p>La Aplicación permite fotografiar, clasificar y consultar, con fines estrictamente personales, copias digitales de tarjetas y documentos relacionados con la discapacidad. Esta política explica qué información se trata y cómo.</p>
+<p>En resumen: sus tarjetas, fotos e información permanecen en su teléfono. BoninyDev no dispone de servidor, ni de cuenta de usuario, ni de herramientas de medición de audiencia, y nunca accede a ellos. El único dato que sale del dispositivo se refiere a la visualización de anuncios por parte de Google AdMob, y únicamente si usted lo consiente.</p>
+<h3>2. DATOS ALMACENADOS EN SU DISPOSITIVO</h3>
+<p>La Aplicación guarda, exclusivamente en el almacenamiento privado de su dispositivo:</p>
+<ul><li>los datos de sus tarjetas: tipo, titular, número, fecha de caducidad, notas;</li><li>las fotografías del anverso y del reverso que usted tome o importe;</li><li>sus preferencias: idioma, país, alto contraste, texto grande, síntesis de voz.</li></ul>
+<p>Estos datos no son recogidos, transmitidos ni consultados por BoninyDev ni por terceros. Solo salen de su dispositivo mediante una acción voluntaria suya: exportación, compartir un PDF, recortar una foto.</p>
+<h3>3. DATOS DE SALUD</h3>
+<p>Las tarjetas que usted guarda (tarjeta de discapacidad, tarjeta de estacionamiento y equivalentes extranjeros) revelan una situación de discapacidad. Son datos sensibles conforme al artículo 9 del RGPD.</p>
+<p>Por esa razón la Aplicación se diseñó para no enviar nunca estos datos: su tratamiento es puramente local y está bajo su exclusivo control, en el marco de la excepción doméstica del artículo 2, apartado 2, letra c) del RGPD. La copia de seguridad automática de Android en Google Drive está deliberadamente desactivada para que estos datos no se copien fuera de su dispositivo sin que usted lo sepa.</p>
+<h3>4. PUBLICIDAD (GOOGLE ADMOB) Y CONSENTIMIENTO</h3>
+<p>La Aplicación muestra un banner publicitario proporcionado por Google AdMob en la pantalla de inicio. Esto es lo que permite ofrecerla de forma gratuita. No se muestra ninguna publicidad en la pantalla de consulta de una tarjeta ni en las pantallas de introducción de datos.</p>
+<p>Para difundir estos anuncios, Google AdMob y sus socios pueden recopilar:</p>
+<ul><li>el identificador publicitario de su dispositivo;</li><li>su dirección IP e información general sobre su dispositivo;</li><li>datos de uso con fines de medición y, en su caso, de personalización;</li><li>en dispositivos Android recientes, señales enviadas mediante las API de privacidad publicitaria de Android (Privacy Sandbox).</li></ul>
+<p>Google recopila y trata esta información como responsable del tratamiento independiente, conforme a su propia política: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Consentimiento: si reside en el Espacio Económico Europeo, el Reino Unido o Suiza, se mostrará un formulario de consentimiento en el primer inicio. Usted decide libremente aceptar o rechazar la publicidad personalizada; el rechazo no impide utilizar la Aplicación ni ninguna de sus funciones. Ningún dato de sus tarjetas se transmite jamás a los servicios publicitarios.</p>
+<p>Puede modificar en cualquier momento sus preferencias publicitarias en los ajustes de su dispositivo Android, en Privacidad y luego Anuncios (restablecer o eliminar el identificador publicitario).</p>
+<h3>5. PERMISOS SOLICITADOS</h3>
+<ul><li>Cámara: para fotografiar sus tarjetas.</li><li>Fotos: para importar una imagen existente desde su galería.</li><li>Internet: para cargar el banner publicitario y abrir un enlace externo en su navegador (página de donación).</li><li>Identificador publicitario: utilizado por Google AdMob para la difusión y medición de los anuncios.</li></ul>
+<p>No se solicita ningún permiso de ubicación, contactos, micrófono ni telefonía.</p>
+<h3>6. EXPORTACIÓN, COMPARTICIÓN Y COPIA DE SEGURIDAD</h3>
+<p>La Aplicación permite exportar sus datos a un archivo JSON, o generar el PDF de una tarjeta para compartirlo. Estas operaciones las inicia únicamente usted: elige el archivo, su destino y sus destinatarios. BoninyDev no tiene acceso ni a esos archivos ni a su contenido.</p>
+<p>Atención: un archivo exportado contiene las fotos de sus tarjetas sin cifrar. Guárdelo en un lugar seguro y compártalo únicamente con personas de confianza.</p>
+<h3>7. CONSERVACIÓN Y SUPRESIÓN</h3>
+<p>Sus datos permanecen en su dispositivo mientras la Aplicación esté instalada. En cualquier momento puede:</p>
+<ul><li>modificar o eliminar una tarjeta (la eliminación borra también sus fotos);</li><li>eliminar todas las tarjetas desde los Ajustes;</li><li>desinstalar la Aplicación, lo que borra definitivamente todos los datos asociados.</li></ul>
+<h3>8. SEGURIDAD</h3>
+<p>Los datos están protegidos por el entorno aislado («sandbox») de las aplicaciones Android, que impide el acceso de otras aplicaciones. Se recomienda encarecidamente bloquear su dispositivo (código, huella, reconocimiento facial): cualquier persona que desbloquee su teléfono podría consultar sus tarjetas.</p>
+<h3>9. SUS DERECHOS</h3>
+<p>Dispone de los derechos de acceso, rectificación, supresión, limitación, oposición y portabilidad previstos por el RGPD. Dado que BoninyDev no conserva ningún dato suyo en ningún servidor, estos derechos se ejercen directa e inmediatamente por usted, de forma local, mediante las funciones de modificación, supresión y exportación de la Aplicación.</p>
+<p>En cuanto a los datos tratados por Google con fines publicitarios, estos derechos se ejercen ante Google. También puede presentar una reclamación ante la autoridad de control de su país de residencia (en España, la AEPD).</p>
+<h3>10. MENORES</h3>
+<p>La Aplicación no está destinada a menores de 13 años y no ofrece ninguna función de comunicación, red social o puesta en contacto. Puede ser utilizada por un menor, idealmente bajo la supervisión de un progenitor o tutor.</p>
+<h3>11. MODIFICACIONES</h3>
+<p>Esta política puede evolucionar para adaptarse a las actualizaciones de la Aplicación o de la normativa aplicable. La versión vigente es la accesible desde Ajustes y luego Política de privacidad, así como en la siguiente dirección:</p>
+<p><a href="https://boninytel-dot.github.io/HandiCarte/">https://boninytel-dot.github.io/HandiCarte/</a></p>
+<h3>12. CONTACTO</h3>
+<p>Para cualquier consulta sobre esta política: contact@boninydev.com</p>
+    </div>
+    <div class="card">
+      <h2>Condiciones de uso</h2>
+<p>Última actualización: 20 de septiembre de 2026</p>
+<h3>1. EDITOR</h3>
+<p>La aplicación HandiCarte («la Aplicación») es desarrollada y editada por BoninyDev, desarrollador independiente establecido en Francia. Contacto: contact@boninydev.com</p>
+<p>Las presentes Condiciones Generales de Uso («CGU») rigen el acceso y el uso de la Aplicación.</p>
+<h3>2. OBJETO DE LA APLICACIÓN</h3>
+<p>HandiCarte es una herramienta que permite fotografiar, clasificar y consultar, con fines estrictamente personales, copias digitales de tarjetas o documentos relacionados con la discapacidad (tarjeta de discapacidad, tarjeta de estacionamiento y equivalentes extranjeros).</p>
+<h3>3. ACEPTACIÓN</h3>
+<p>La instalación y el uso de la Aplicación implican la aceptación plena y sin reservas de las presentes CGU y de la Política de Privacidad. Si no las acepta, no debe utilizar la Aplicación.</p>
+<h3>4. ⚠ ADVERTENCIA ESENCIAL — LAS TARJETAS DIGITALES NO SON DOCUMENTOS OFICIALES</h3>
+<p>4.1 HandiCarte es exclusivamente una herramienta de almacenamiento y consulta personales. Las fotografías de tarjetas, distintivos, justificantes o documentos administrativos mostradas en la Aplicación NO CONSTITUYEN EN NINGÚN CASO DOCUMENTOS OFICIALES y no son duplicados, ni copias compulsadas, ni equivalentes jurídicos de los documentos originales.</p>
+<p>4.2 Estas reproducciones NO TIENEN NINGÚN VALOR PROBATORIO, ADMINISTRATIVO NI LEGAL. No comprometen la responsabilidad de los organismos emisores de los documentos originales ni la de BoninyDev.</p>
+<p>4.3 El usuario DEBE conservar y poder presentar, en todo momento, las tarjetas o documentos ORIGINALES en el formato físico expedido por la autoridad u organismo competente, en particular cuando la ley, un reglamento o un tercero (comercio, transporte, empleador, administración) así lo exija.</p>
+<p>4.4 BoninyDev no podrá en ningún caso ser considerado responsable de:</p>
+<ul><li>la negativa de un tercero a aceptar una reproducción digital mostrada en la Aplicación en lugar del documento original;</li><li>cualquier consecuencia financiera, administrativa, jurídica o de otro tipo derivada del uso, la presentación, la pérdida o la imposibilidad de presentar una reproducción digital o un documento original;</li><li>la exactitud, validez, legibilidad, actualidad o fecha de caducidad de la información fotografiada o introducida por el usuario.</li></ul>
+<p>4.5 El usuario es el único responsable de la veracidad, exactitud y actualización de la información que introduce o fotografía, así como del uso que hace de ella, incluida la decisión de mostrar una reproducción digital a un tercero.</p>
+<p>4.6 La Aplicación es una ayuda personal a la consulta. No sustituye ningún trámite administrativo, declaración, justificación legal u obligación que incumba al usuario.</p>
+<h3>5. USO PERSONAL Y LÍCITO</h3>
+<p>La Aplicación está reservada a un uso personal. Queda prohibido almacenar documentos pertenecientes a terceros sin su consentimiento, así como utilizar una reproducción digital para obtener indebidamente un derecho, una ventaja o una prestación. El uso fraudulento de un documento administrativo es constitutivo de infracción penal, de la que el usuario sería el único responsable.</p>
+<h3>6. DISPONIBILIDAD Y FUNCIONAMIENTO</h3>
+<p>La gestión de tarjetas funciona sin conexión; solo el banner publicitario requiere conexión. BoninyDev se esfuerza por garantizar el buen funcionamiento de la Aplicación, pero no garantiza una disponibilidad ininterrumpida, la ausencia total de errores ni la compatibilidad con todos los dispositivos y versiones de Android.</p>
+<h3>7. PUBLICIDAD</h3>
+<p>La Aplicación es gratuita y se financia mediante un banner publicitario proporcionado por Google AdMob en la pantalla de inicio. No se muestra publicidad durante la consulta de una tarjeta. El contenido de los anuncios lo selecciona Google y no BoninyDev, que no puede ser considerado responsable de los productos o servicios promocionados. Las modalidades de recogida de datos y de obtención del consentimiento se detallan en la Política de Privacidad.</p>
+<h3>8. LIMITACIÓN DE RESPONSABILIDAD</h3>
+<p>La Aplicación se suministra «tal cual», sin garantía de ningún tipo, expresa o implícita. En la medida permitida por la ley aplicable, BoninyDev no podrá ser considerado responsable de:</p>
+<ul><li>la pérdida, corrupción o supresión de datos como consecuencia de una desinstalación, una actualización, un fallo del dispositivo o cualquier otra causa;</li><li>cualquier daño directo o indirecto derivado del uso, o de la imposibilidad de uso, de la Aplicación.</li></ul>
+<p>Dado que la copia de seguridad automática en la nube está desactivada para proteger sus datos de salud, se recomienda encarecidamente exportar sus datos con regularidad desde el menú principal, especialmente antes de cambiar de teléfono.</p>
+<p>Ninguna estipulación de las presentes CGU excluye los derechos imperativos reconocidos a los consumidores por la ley de su país de residencia, ni la responsabilidad de BoninyDev en caso de culpa grave, dolo o daños personales.</p>
+<h3>9. DONACIÓN AL DESARROLLADOR</h3>
+<p>La Aplicación ofrece un botón que permite realizar, de forma estrictamente voluntaria, una donación al desarrollador a través de la plataforma de terceros PayPal. Esta donación no da derecho a ninguna contraprestación, función adicional o ventaja dentro de la Aplicación. Está sujeta a las condiciones de PayPal, independientes de BoninyDev.</p>
+<h3>10. PROPIEDAD INTELECTUAL</h3>
+<p>La Aplicación, su nombre, logotipo, diseño, textos y código fuente son propiedad de BoninyDev, con excepción de los componentes de terceros utilizados bajo licencia de código abierto. Queda prohibida toda reproducción, modificación o distribución no autorizada.</p>
+<h3>11. MODIFICACIÓN DE LAS CGU</h3>
+<p>BoninyDev puede modificar las presentes CGU, en particular para adaptarlas a la evolución de la Aplicación o de la normativa. La versión aplicable es la accesible desde Ajustes y luego CGU. En caso de modificación sustancial, podrá solicitarse una nueva aceptación.</p>
+<h3>12. LEY APLICABLE</h3>
+<p>Las presentes CGU se rigen por el derecho francés. A falta de resolución amistosa, cualquier litigio será competencia de los tribunales franceses, sin perjuicio de las normas imperativas aplicables a los consumidores en su país de residencia.</p>
+<h3>13. CONTACTO</h3>
+<p>Para cualquier consulta sobre las presentes CGU: contact@boninydev.com</p>
+    </div>
+  </section>
+  <section id="content-it" lang="it">
+    <div class="card">
+      <h2>Informativa sulla privacy</h2>
+<p>Ultimo aggiornamento: 20 settembre 2026</p>
+<h3>1. EDITORE E FINALITÀ</h3>
+<p>HandiCarte («l'Applicazione») è pubblicata da BoninyDev, sviluppatore indipendente con sede in Francia, titolare del trattamento ai sensi del GDPR. Contatto: contact@boninydev.com</p>
+<p>L'Applicazione consente di fotografare, catalogare e consultare, a fini esclusivamente personali, copie digitali di tessere e documenti legati alla disabilità. La presente informativa spiega quali informazioni vengono trattate e in che modo.</p>
+<p>In sintesi: le tue tessere, le tue foto e i tuoi dati restano sul telefono. BoninyDev non dispone di server, account utente o strumenti di analisi e non vi accede mai. L'unico dato che lascia il dispositivo riguarda la visualizzazione degli annunci da parte di Google AdMob, e solo se acconsenti.</p>
+<h3>2. DATI MEMORIZZATI SUL TUO DISPOSITIVO</h3>
+<p>L'Applicazione registra, esclusivamente nella memoria privata del dispositivo:</p>
+<ul><li>i dati delle tue tessere: tipo, titolare, numero, data di scadenza, note;</li><li>le fotografie fronte e retro che scatti o importi;</li><li>le tue preferenze: lingua, paese, contrasto elevato, testo grande, sintesi vocale.</li></ul>
+<p>Questi dati non sono raccolti, trasmessi né consultati da BoninyDev o da terzi. Lasciano il dispositivo solo tramite un'azione volontaria da parte tua: esportazione, condivisione di un PDF, ritaglio di una foto.</p>
+<h3>3. DATI SANITARI</h3>
+<p>Le tessere che registri (contrassegno di parcheggio, certificazioni di invalidità e equivalenti esteri) rivelano una condizione di disabilità. Si tratta di dati sensibili ai sensi dell'articolo 9 del GDPR.</p>
+<p>Per questo motivo l'Applicazione è stata progettata per non inviare mai tali dati: il trattamento è puramente locale e sotto il tuo esclusivo controllo, nell'ambito dell'eccezione domestica prevista dall'articolo 2, paragrafo 2, lettera c) del GDPR. Il backup automatico di Android su Google Drive è volutamente disattivato affinché questi dati non vengano copiati fuori dal dispositivo a tua insaputa.</p>
+<h3>4. PUBBLICITÀ (GOOGLE ADMOB) E CONSENSO</h3>
+<p>L'Applicazione mostra un banner pubblicitario fornito da Google AdMob nella schermata principale. È ciò che consente di offrirla gratuitamente. Nessuna pubblicità viene mostrata nella schermata di consultazione di una tessera né nelle schermate di inserimento dati.</p>
+<p>Per diffondere questi annunci, Google AdMob e i suoi partner possono raccogliere:</p>
+<ul><li>l'identificativo pubblicitario del dispositivo;</li><li>l'indirizzo IP e informazioni generali sul dispositivo;</li><li>dati di utilizzo a fini di misurazione ed eventualmente di personalizzazione;</li><li>sui dispositivi Android recenti, segnali trasmessi tramite le API di privacy pubblicitaria di Android (Privacy Sandbox).</li></ul>
+<p>Queste informazioni sono raccolte e trattate da Google in qualità di titolare autonomo, secondo la propria informativa: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Consenso: se risiedi nello Spazio economico europeo, nel Regno Unito o in Svizzera, al primo avvio viene mostrato un modulo di consenso. Sei libero di accettare o rifiutare la pubblicità personalizzata; il rifiuto non impedisce di utilizzare l'Applicazione né alcuna delle sue funzioni. Nessun dato delle tue tessere viene mai trasmesso ai servizi pubblicitari.</p>
+<p>Puoi modificare in qualsiasi momento le preferenze pubblicitarie nelle impostazioni del dispositivo Android, alla voce Privacy e poi Annunci (reimposta o elimina l'identificativo pubblicitario).</p>
+<h3>5. AUTORIZZAZIONI RICHIESTE</h3>
+<ul><li>Fotocamera: per fotografare le tue tessere.</li><li>Foto: per importare un'immagine esistente dalla galleria.</li><li>Internet: per caricare il banner pubblicitario e aprire un collegamento esterno nel browser (pagina di donazione).</li><li>Identificativo pubblicitario: usato da Google AdMob per la diffusione e la misurazione degli annunci.</li></ul>
+<p>Non viene richiesta alcuna autorizzazione di localizzazione, contatti, microfono o telefonia.</p>
+<h3>6. ESPORTAZIONE, CONDIVISIONE E BACKUP</h3>
+<p>L'Applicazione consente di esportare i dati in un file JSON o di generare il PDF di una tessera per condividerlo. Queste operazioni sono avviate solo da te: scegli il file, la destinazione e i destinatari. BoninyDev non ha accesso né a questi file né al loro contenuto.</p>
+<p>Attenzione: un file esportato contiene le foto delle tue tessere in chiaro. Conservalo in un luogo sicuro e condividilo solo con persone di fiducia.</p>
+<h3>7. CONSERVAZIONE E CANCELLAZIONE</h3>
+<p>I tuoi dati restano sul dispositivo finché l'Applicazione è installata. In qualsiasi momento puoi:</p>
+<ul><li>modificare o eliminare una tessera (l'eliminazione cancella anche le sue foto);</li><li>eliminare tutte le tessere dalle Impostazioni;</li><li>disinstallare l'Applicazione, cancellando definitivamente tutti i dati associati.</li></ul>
+<h3>8. SICUREZZA</h3>
+<p>I dati sono protetti dalla sandbox applicativa di Android, che impedisce l'accesso da parte di altre applicazioni. Si raccomanda vivamente di bloccare il dispositivo (codice, impronta, riconoscimento facciale): chiunque sblocchi il telefono potrebbe consultare le tue tessere.</p>
+<h3>9. I TUOI DIRITTI</h3>
+<p>Hai i diritti di accesso, rettifica, cancellazione, limitazione, opposizione e portabilità previsti dal GDPR. Poiché BoninyDev non conserva alcun dato che ti riguarda su un server, questi diritti si esercitano direttamente e immediatamente da te, localmente, tramite le funzioni di modifica, cancellazione ed esportazione dell'Applicazione.</p>
+<p>Per i dati trattati da Google a fini pubblicitari, tali diritti vanno esercitati nei confronti di Google. Puoi inoltre presentare reclamo all'autorità di controllo del tuo paese di residenza (in Italia, il Garante per la protezione dei dati personali).</p>
+<h3>10. MINORI</h3>
+<p>L'Applicazione non è destinata ai minori di 13 anni e non offre funzioni di comunicazione, social network o messa in contatto. Può essere utilizzata da un minore, preferibilmente sotto la supervisione di un genitore o tutore.</p>
+<h3>11. MODIFICHE</h3>
+<p>La presente informativa può evolvere per seguire gli aggiornamenti dell'Applicazione o della normativa applicabile. La versione in vigore è quella accessibile da Impostazioni e poi Informativa sulla privacy, nonché al seguente indirizzo:</p>
+<p><a href="https://boninytel-dot.github.io/HandiCarte/">https://boninytel-dot.github.io/HandiCarte/</a></p>
+<h3>12. CONTATTO</h3>
+<p>Per qualsiasi domanda su questa informativa: contact@boninydev.com</p>
+    </div>
+    <div class="card">
+      <h2>Condizioni di utilizzo</h2>
+<p>Ultimo aggiornamento: 20 settembre 2026</p>
+<h3>1. EDITORE</h3>
+<p>L'applicazione HandiCarte («l'Applicazione») è sviluppata e pubblicata da BoninyDev, sviluppatore indipendente con sede in Francia. Contatto: contact@boninydev.com</p>
+<p>Le presenti Condizioni Generali di Utilizzo («CGU») disciplinano l'accesso e l'utilizzo dell'Applicazione.</p>
+<h3>2. OGGETTO DELL'APPLICAZIONE</h3>
+<p>HandiCarte è uno strumento che consente di fotografare, catalogare e consultare, a fini esclusivamente personali, copie digitali di tessere o documenti legati alla disabilità (contrassegno di parcheggio, certificazioni di invalidità e equivalenti esteri).</p>
+<h3>3. ACCETTAZIONE</h3>
+<p>L'installazione e l'utilizzo dell'Applicazione comportano l'accettazione piena e incondizionata delle presenti CGU e dell'Informativa sulla privacy. Se non le accetti, non devi utilizzare l'Applicazione.</p>
+<h3>4. ⚠ AVVERTENZA ESSENZIALE — LE TESSERE DIGITALI NON SONO DOCUMENTI UFFICIALI</h3>
+<p>4.1 HandiCarte è esclusivamente uno strumento di archiviazione e consultazione personali. Le fotografie di tessere, contrassegni, attestazioni o documenti amministrativi mostrate nell'Applicazione NON COSTITUISCONO IN ALCUN CASO DOCUMENTI UFFICIALI e non sono né duplicati, né copie conformi, né equivalenti giuridici dei documenti originali.</p>
+<p>4.2 Tali riproduzioni NON HANNO ALCUN VALORE PROBATORIO, AMMINISTRATIVO O LEGALE. Non impegnano la responsabilità degli enti che hanno rilasciato i documenti originali né quella di BoninyDev.</p>
+<p>4.3 L'utente DEVE conservare ed essere in grado di presentare, in qualsiasi momento, le tessere o i documenti ORIGINALI nel formato fisico rilasciato dall'autorità o dall'ente competente, in particolare quando la legge, un regolamento o un terzo (esercizio commerciale, trasporto, datore di lavoro, amministrazione) lo richieda.</p>
+<p>4.4 BoninyDev non potrà in alcun caso essere ritenuto responsabile:</p>
+<ul><li>del rifiuto di un terzo di accettare una riproduzione digitale mostrata tramite l'Applicazione al posto del documento originale;</li><li>di qualsiasi conseguenza finanziaria, amministrativa, giuridica o di altra natura derivante dall'uso, dalla presentazione, dalla perdita o dall'impossibilità di presentare una riproduzione digitale o un documento originale;</li><li>dell'esattezza, validità, leggibilità, attualità o scadenza delle informazioni fotografate o inserite dall'utente.</li></ul>
+<p>4.5 L'utente è l'unico responsabile della veridicità, esattezza e aggiornamento delle informazioni che inserisce o fotografa, nonché dell'uso che ne fa, compresa la decisione di mostrare una riproduzione digitale a un terzo.</p>
+<p>4.6 L'Applicazione è un ausilio personale alla consultazione. Non sostituisce alcuna pratica amministrativa, dichiarazione, giustificazione legale o obbligo a carico dell'utente.</p>
+<h3>5. USO PERSONALE E LECITO</h3>
+<p>L'Applicazione è riservata a un uso personale. È vietato archiviarvi documenti appartenenti a terzi senza il loro consenso e utilizzare una riproduzione digitale allo scopo di ottenere indebitamente un diritto, un vantaggio o una prestazione. L'uso fraudolento di un documento amministrativo costituisce reato, del quale risponde unicamente l'utente.</p>
+<h3>6. DISPONIBILITÀ E FUNZIONAMENTO</h3>
+<p>La gestione delle tessere funziona offline; solo il banner pubblicitario richiede una connessione. BoninyDev si adopera per assicurare il buon funzionamento dell'Applicazione ma non garantisce una disponibilità ininterrotta, l'assenza totale di errori o la compatibilità con tutti i dispositivi e le versioni di Android.</p>
+<h3>7. PUBBLICITÀ</h3>
+<p>L'Applicazione è gratuita ed è finanziata dalla visualizzazione di un banner pubblicitario fornito da Google AdMob nella schermata principale. Nessuna pubblicità è mostrata durante la consultazione di una tessera. Il contenuto degli annunci è selezionato da Google e non da BoninyDev, che non può essere ritenuto responsabile dei prodotti o servizi promossi. Le modalità di raccolta dei dati e di acquisizione del consenso sono descritte nell'Informativa sulla privacy.</p>
+<h3>8. LIMITAZIONE DI RESPONSABILITÀ</h3>
+<p>L'Applicazione è fornita «così com'è», senza garanzia di alcun tipo, espressa o implicita. Nei limiti consentiti dalla legge applicabile, BoninyDev non potrà essere ritenuto responsabile:</p>
+<ul><li>della perdita, del danneggiamento o della cancellazione di dati a seguito di disinstallazione, aggiornamento, malfunzionamento del dispositivo o qualsiasi altra causa;</li><li>di qualsiasi danno diretto o indiretto derivante dall'uso, o dall'impossibilità di usare, l'Applicazione.</li></ul>
+<p>Poiché il backup automatico nel cloud è disattivato per proteggere i tuoi dati sanitari, si raccomanda vivamente di esportare regolarmente i dati dal menu principale, in particolare prima di cambiare telefono.</p>
+<p>Nessuna disposizione delle presenti CGU esclude i diritti imperativi riconosciuti ai consumatori dalla legge del loro paese di residenza, né la responsabilità di BoninyDev in caso di colpa grave, dolo o danno alla persona.</p>
+<h3>9. DONAZIONE ALLO SVILUPPATORE</h3>
+<p>L'Applicazione propone un pulsante che consente di effettuare, su base strettamente volontaria, una donazione allo sviluppatore tramite la piattaforma terza PayPal. Questa donazione non dà diritto ad alcuna controprestazione, funzionalità aggiuntiva o vantaggio all'interno dell'Applicazione. È soggetta alle condizioni di PayPal, indipendenti da BoninyDev.</p>
+<h3>10. PROPRIETÀ INTELLETTUALE</h3>
+<p>L'Applicazione, il suo nome, logo, design, testi e codice sorgente sono di proprietà di BoninyDev, ad eccezione dei componenti di terzi utilizzati con licenza open source. Sono vietate riproduzione, modifica o distribuzione non autorizzate.</p>
+<h3>11. MODIFICA DELLE CGU</h3>
+<p>BoninyDev può modificare le presenti CGU, in particolare per adeguarle all'evoluzione dell'Applicazione o della normativa. La versione applicabile è quella accessibile da Impostazioni e poi CGU. In caso di modifica sostanziale potrà essere richiesta una nuova accettazione.</p>
+<h3>12. LEGGE APPLICABILE</h3>
+<p>Le presenti CGU sono soggette al diritto francese. In mancanza di composizione amichevole, ogni controversia sarà di competenza dei tribunali francesi, fatte salve le norme imperative applicabili ai consumatori nel loro paese di residenza.</p>
+<h3>13. CONTATTO</h3>
+<p>Per qualsiasi domanda sulle presenti CGU: contact@boninydev.com</p>
+    </div>
+  </section>
+  <section id="content-nl" lang="nl">
+    <div class="card">
+      <h2>Privacybeleid</h2>
+<p>Laatst bijgewerkt: 20 september 2026</p>
+<h3>1. UITGEVER EN DOEL</h3>
+<p>HandiCarte („de App") wordt uitgegeven door BoninyDev, een onafhankelijke ontwikkelaar gevestigd in Frankrijk, verwerkingsverantwoordelijke in de zin van de AVG. Contact: contact@boninydev.com</p>
+<p>Met de App kunt u digitale kopieën van kaarten en documenten in verband met een handicap fotograferen, ordenen en raadplegen, uitsluitend voor persoonlijk gebruik. Dit beleid legt uit welke gegevens worden verwerkt en hoe.</p>
+<p>Kort gezegd: uw kaarten, foto's en gegevens blijven op uw telefoon. BoninyDev heeft geen server, geen gebruikersaccount en geen analysetools, en krijgt er nooit toegang toe. De enige gegevens die het apparaat verlaten betreffen het tonen van advertenties door Google AdMob, en alleen als u daarmee instemt.</p>
+<h3>2. GEGEVENS DIE OP UW APPARAAT WORDEN OPGESLAGEN</h3>
+<p>De App slaat uitsluitend in de privéopslag van uw apparaat op:</p>
+<ul><li>de gegevens van uw kaarten: type, houder, nummer, vervaldatum, notities;</li><li>de voor- en achterzijdefoto's die u maakt of importeert;</li><li>uw voorkeuren: taal, land, hoog contrast, grote tekst, spraakweergave.</li></ul>
+<p>Deze gegevens worden niet verzameld, doorgegeven of ingezien door BoninyDev of door derden. Ze verlaten uw apparaat uitsluitend door een handeling van uzelf: exporteren, een pdf delen, een foto bijsnijden.</p>
+<h3>3. GEZONDHEIDSGEGEVENS</h3>
+<p>De kaarten die u opslaat (gehandicaptenparkeerkaart, erkenningen van een handicap en buitenlandse equivalenten) onthullen een handicap. Dit zijn gevoelige gegevens in de zin van artikel 9 AVG.</p>
+<p>Daarom is de App zo ontworpen dat deze gegevens nooit worden verzonden: de verwerking is louter lokaal en uitsluitend onder uw controle, binnen de huishoudelijke uitzondering van artikel 2, lid 2, onder c), AVG. De automatische back-up van Android naar Google Drive is bewust uitgeschakeld, zodat deze gegevens niet buiten uw medeweten van uw apparaat worden gekopieerd.</p>
+<h3>4. ADVERTENTIES (GOOGLE ADMOB) EN TOESTEMMING</h3>
+<p>De App toont op het startscherm een banneradvertentie van Google AdMob. Daardoor kan de App gratis worden aangeboden. Er wordt geen advertentie getoond op het scherm waarop een kaart wordt bekeken, noch op de invoerschermen.</p>
+<p>Om deze advertenties te tonen kunnen Google AdMob en zijn partners verzamelen:</p>
+<ul><li>de advertentie-id van uw apparaat;</li><li>uw IP-adres en algemene informatie over uw apparaat;</li><li>gebruiksgegevens voor meting en, in voorkomend geval, personalisatie;</li><li>op recente Android-apparaten, signalen via de Android-privacy-API's voor advertenties (Privacy Sandbox).</li></ul>
+<p>Google verzamelt en verwerkt deze informatie als afzonderlijke verwerkingsverantwoordelijke, overeenkomstig zijn eigen beleid: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Toestemming: als u in de Europese Economische Ruimte, het Verenigd Koninkrijk of Zwitserland woont, verschijnt bij de eerste start een toestemmingsformulier. U beslist vrij of u gepersonaliseerde advertenties aanvaardt of weigert; een weigering belet u niet de App of een van haar functies te gebruiken. Gegevens van uw kaarten worden nooit aan advertentiediensten doorgegeven.</p>
+<p>U kunt uw advertentievoorkeuren op elk moment wijzigen in de instellingen van uw Android-apparaat, onder Privacy en vervolgens Advertenties (advertentie-id opnieuw instellen of verwijderen).</p>
+<h3>5. GEVRAAGDE MACHTIGINGEN</h3>
+<ul><li>Camera: om uw kaarten te fotograferen.</li><li>Foto's: om een bestaande afbeelding uit uw galerij te importeren.</li><li>Internet: om de banneradvertentie te laden en een externe link in uw browser te openen (donatiepagina).</li><li>Advertentie-id: gebruikt door Google AdMob voor het tonen en meten van advertenties.</li></ul>
+<p>Er wordt geen toestemming gevraagd voor locatie, contacten, microfoon of telefonie.</p>
+<h3>6. EXPORTEREN, DELEN EN BACK-UP</h3>
+<p>Met de App kunt u uw gegevens naar een JSON-bestand exporteren of een pdf van een kaart maken om te delen. Deze handelingen start uitsluitend u: u kiest het bestand, de bestemming en de ontvangers. BoninyDev heeft geen toegang tot deze bestanden noch tot de inhoud ervan.</p>
+<p>Let op: een geëxporteerd bestand bevat uw kaartfoto's onversleuteld. Bewaar het op een veilige plaats en deel het alleen met vertrouwde personen.</p>
+<h3>7. BEWARING EN VERWIJDERING</h3>
+<p>Uw gegevens blijven op uw apparaat zolang de App geïnstalleerd is. U kunt op elk moment:</p>
+<ul><li>een kaart wijzigen of verwijderen (bij verwijdering worden ook de foto's gewist);</li><li>alle kaarten verwijderen via Instellingen;</li><li>de App verwijderen, waardoor alle bijbehorende gegevens definitief worden gewist.</li></ul>
+<h3>8. BEVEILIGING</h3>
+<p>De gegevens worden beschermd door de Android-toepassingssandbox, die toegang door andere apps verhindert. Het wordt sterk aangeraden uw apparaat te vergrendelen (code, vingerafdruk, gezichtsherkenning): wie uw telefoon ontgrendelt, zou uw kaarten kunnen inzien.</p>
+<h3>9. UW RECHTEN</h3>
+<p>U beschikt over de rechten op inzage, rectificatie, wissing, beperking, bezwaar en overdraagbaarheid uit de AVG. Aangezien BoninyDev geen enkel gegeven over u op een server bewaart, oefent u deze rechten rechtstreeks en onmiddellijk lokaal uit via de wijzig-, verwijder- en exportfuncties van de App.</p>
+<p>Voor de door Google in het kader van advertenties verwerkte gegevens oefent u deze rechten uit bij Google. U kunt ook een klacht indienen bij de toezichthoudende autoriteit van uw woonland (in Nederland de Autoriteit Persoonsgegevens).</p>
+<h3>10. KINDEREN</h3>
+<p>De App is niet bestemd voor kinderen jonger dan 13 jaar en biedt geen communicatie-, sociale-netwerk- of contactfuncties. Gebruik door een minderjarige is mogelijk, bij voorkeur onder toezicht van een ouder of voogd.</p>
+<h3>11. WIJZIGINGEN</h3>
+<p>Dit beleid kan wijzigen om updates van de App of van de toepasselijke regelgeving te volgen. De geldende versie is die welke toegankelijk is via Instellingen en vervolgens Privacybeleid, alsook op het volgende adres:</p>
+<p><a href="https://boninytel-dot.github.io/HandiCarte/">https://boninytel-dot.github.io/HandiCarte/</a></p>
+<h3>12. CONTACT</h3>
+<p>Voor vragen over dit beleid: contact@boninydev.com</p>
+    </div>
+    <div class="card">
+      <h2>Gebruiksvoorwaarden</h2>
+<p>Laatst bijgewerkt: 20 september 2026</p>
+<h3>1. UITGEVER</h3>
+<p>De toepassing HandiCarte („de App") wordt ontwikkeld en uitgegeven door BoninyDev, een onafhankelijke ontwikkelaar gevestigd in Frankrijk. Contact: contact@boninydev.com</p>
+<p>Deze Algemene Gebruiksvoorwaarden regelen de toegang tot en het gebruik van de App.</p>
+<h3>2. DOEL VAN DE APP</h3>
+<p>HandiCarte is een hulpmiddel om digitale kopieën van kaarten of documenten in verband met een handicap (gehandicaptenparkeerkaart, erkenningen van een handicap en buitenlandse equivalenten) te fotograferen, te ordenen en te raadplegen, uitsluitend voor persoonlijke doeleinden.</p>
+<h3>3. AANVAARDING</h3>
+<p>Installatie en gebruik van de App houden de volledige en onvoorwaardelijke aanvaarding in van deze voorwaarden en van het Privacybeleid. Aanvaardt u deze niet, dan mag u de App niet gebruiken.</p>
+<h3>4. ⚠ ESSENTIËLE WAARSCHUWING — DIGITALE KAARTEN ZIJN GEEN OFFICIËLE DOCUMENTEN</h3>
+<p>4.1 HandiCarte is uitsluitend een hulpmiddel voor persoonlijke opslag en raadpleging. Foto's van kaarten, badges, attesten of administratieve documenten die in de App worden getoond, ZIJN IN GEEN GEVAL OFFICIËLE DOCUMENTEN en zijn geen duplicaten, geen eensluidend verklaarde afschriften en geen juridische equivalenten van de originele documenten.</p>
+<p>4.2 Deze reproducties HEBBEN GEEN BEWIJS-, ADMINISTRATIEVE OF JURIDISCHE WAARDE. Zij binden noch de instanties die de originele documenten hebben afgegeven, noch BoninyDev.</p>
+<p>4.3 De gebruiker MOET de ORIGINELE kaarten of documenten bewaren en op elk moment kunnen tonen, in de fysieke vorm die door de bevoegde autoriteit of instantie is afgegeven, in het bijzonder wanneer de wet, een regeling of een derde (handelaar, vervoerder, werkgever, overheid) dit vereist.</p>
+<p>4.4 BoninyDev kan in geen geval aansprakelijk worden gesteld voor:</p>
+<ul><li>de weigering van een derde om een via de App getoonde digitale reproductie te aanvaarden in plaats van het originele document;</li><li>enig financieel, administratief, juridisch of ander gevolg van het gebruik, het tonen, het verlies of de onmogelijkheid om een digitale reproductie of een origineel document te tonen;</li><li>de juistheid, geldigheid, leesbaarheid, actualiteit of vervaldatum van de door de gebruiker gefotografeerde of ingevoerde gegevens.</li></ul>
+<p>4.5 De gebruiker is als enige verantwoordelijk voor de waarheidsgetrouwheid, juistheid en actualisering van de gegevens die hij invoert of fotografeert, en voor het gebruik dat hij ervan maakt, met inbegrip van de beslissing een digitale reproductie aan een derde te tonen.</p>
+<p>4.6 De App is een persoonlijk raadpleeghulpmiddel. Zij vervangt geen enkele administratieve stap, aangifte, wettelijke rechtvaardiging of verplichting van de gebruiker.</p>
+<h3>5. PERSOONLIJK EN RECHTMATIG GEBRUIK</h3>
+<p>De App is uitsluitend voor persoonlijk gebruik bestemd. Het is verboden er documenten van derden in op te slaan zonder hun toestemming, en een digitale reproductie te gebruiken om onrechtmatig een recht, voordeel of prestatie te verkrijgen. Frauduleus gebruik van een administratief document is strafbaar; de gebruiker is daarvoor als enige verantwoordelijk.</p>
+<h3>6. BESCHIKBAARHEID EN WERKING</h3>
+<p>Het beheer van kaarten werkt offline; alleen de banneradvertentie vereist een verbinding. BoninyDev streeft naar een goede werking van de App maar garandeert geen ononderbroken beschikbaarheid, geen volledige afwezigheid van fouten en geen compatibiliteit met alle apparaten en Android-versies.</p>
+<h3>7. RECLAME</h3>
+<p>De App is gratis en wordt gefinancierd door een banneradvertentie van Google AdMob op het startscherm. Tijdens het raadplegen van een kaart wordt geen reclame getoond. De inhoud van de advertenties wordt door Google geselecteerd en niet door BoninyDev, dat niet aansprakelijk kan worden gesteld voor de aangeprezen producten of diensten. De wijze van gegevensverzameling en toestemming staat beschreven in het Privacybeleid.</p>
+<h3>8. BEPERKING VAN AANSPRAKELIJKHEID</h3>
+<p>De App wordt geleverd „zoals ze is", zonder enige uitdrukkelijke of stilzwijgende garantie. Voor zover toegestaan door het toepasselijke recht kan BoninyDev niet aansprakelijk worden gesteld voor:</p>
+<ul><li>verlies, beschadiging of verwijdering van gegevens als gevolg van een deïnstallatie, een update, een storing van het apparaat of enige andere oorzaak;</li><li>enige directe of indirecte schade die voortvloeit uit het gebruik of de onmogelijkheid tot gebruik van de App.</li></ul>
+<p>Aangezien de automatische cloudback-up is uitgeschakeld om uw gezondheidsgegevens te beschermen, wordt sterk aangeraden regelmatig te exporteren via het hoofdmenu, in het bijzonder voordat u van telefoon verandert.</p>
+<p>Geen enkele bepaling van deze voorwaarden doet afbreuk aan de dwingende consumentenrechten volgens het recht van uw woonland, noch aan de aansprakelijkheid van BoninyDev bij grove schuld, opzet of lichamelijk letsel.</p>
+<h3>9. DONATIE AAN DE ONTWIKKELAAR</h3>
+<p>De App biedt een knop waarmee u volledig vrijwillig een donatie aan de ontwikkelaar kunt doen via het externe platform PayPal. Deze donatie geeft geen recht op enige tegenprestatie, extra functie of voordeel binnen de App. Zij is onderworpen aan de voorwaarden van PayPal, los van BoninyDev.</p>
+<h3>10. INTELLECTUELE EIGENDOM</h3>
+<p>De App, haar naam, logo, ontwerp, teksten en broncode zijn eigendom van BoninyDev, met uitzondering van componenten van derden die onder een opensourcelicentie worden gebruikt. Elke ongeoorloofde reproductie, wijziging of verspreiding is verboden.</p>
+<h3>11. WIJZIGING VAN DE VOORWAARDEN</h3>
+<p>BoninyDev kan deze voorwaarden wijzigen, met name om ze aan te passen aan de ontwikkeling van de App of de regelgeving. De toepasselijke versie is die welke toegankelijk is via Instellingen en vervolgens Gebruiksvoorwaarden. Bij een wezenlijke wijziging kan om een nieuwe aanvaarding worden gevraagd.</p>
+<h3>12. TOEPASSELIJK RECHT</h3>
+<p>Deze voorwaarden zijn onderworpen aan het Franse recht. Bij gebreke van een minnelijke schikking zijn de Franse rechtbanken bevoegd, onder voorbehoud van de dwingende regels die op consumenten in hun woonland van toepassing zijn.</p>
+<h3>13. CONTACT</h3>
+<p>Voor vragen over deze voorwaarden: contact@boninydev.com</p>
+    </div>
+  </section>
+  <section id="content-pt" lang="pt">
+    <div class="card">
+      <h2>Política de privacidade</h2>
+<p>Última atualização: 20 de setembro de 2026</p>
+<h3>1. EDITOR E FINALIDADE</h3>
+<p>A HandiCarte («a Aplicação») é editada pela BoninyDev, programador independente estabelecido em França, responsável pelo tratamento na aceção do RGPD. Contacto: contact@boninydev.com</p>
+<p>A Aplicação permite fotografar, organizar e consultar, para fins estritamente pessoais, cópias digitais de cartões e documentos relacionados com a deficiência. A presente política explica que informações são tratadas e de que forma.</p>
+<p>Em resumo: os seus cartões, fotografias e dados permanecem no seu telemóvel. A BoninyDev não dispõe de servidor, conta de utilizador ou ferramentas de análise, e nunca lhes acede. O único dado que sai do dispositivo diz respeito à apresentação de anúncios pela Google AdMob, e apenas se o consentir.</p>
+<h3>2. DADOS GUARDADOS NO SEU DISPOSITIVO</h3>
+<p>A Aplicação guarda, exclusivamente no armazenamento privado do seu dispositivo:</p>
+<ul><li>os dados dos seus cartões: tipo, titular, número, data de validade, notas;</li><li>as fotografias da frente e do verso que tira ou importa;</li><li>as suas preferências: idioma, país, contraste elevado, texto grande, síntese de voz.</li></ul>
+<p>Estes dados não são recolhidos, transmitidos nem consultados pela BoninyDev ou por terceiros. Só saem do seu dispositivo por uma ação voluntária sua: exportação, partilha de um PDF, recorte de uma fotografia.</p>
+<h3>3. DADOS DE SAÚDE</h3>
+<p>Os cartões que guarda (cartão de estacionamento para pessoas com deficiência, atestados de incapacidade e equivalentes estrangeiros) revelam uma situação de deficiência. São dados sensíveis na aceção do artigo 9.º do RGPD.</p>
+<p>É por isso que a Aplicação foi concebida para nunca enviar estes dados: o tratamento é puramente local e sob o seu exclusivo controlo, no âmbito da exceção doméstica do artigo 2.º, n.º 2, alínea c), do RGPD. A cópia de segurança automática do Android para o Google Drive está deliberadamente desativada para que estes dados não sejam copiados para fora do seu dispositivo sem o seu conhecimento.</p>
+<h3>4. PUBLICIDADE (GOOGLE ADMOB) E CONSENTIMENTO</h3>
+<p>A Aplicação apresenta um banner publicitário fornecido pela Google AdMob no ecrã inicial. É isso que permite disponibilizá-la gratuitamente. Não é apresentada qualquer publicidade no ecrã de consulta de um cartão nem nos ecrãs de introdução de dados.</p>
+<p>Para difundir estes anúncios, a Google AdMob e os seus parceiros podem recolher:</p>
+<ul><li>o identificador de publicidade do seu dispositivo;</li><li>o seu endereço IP e informações gerais sobre o seu dispositivo;</li><li>dados de utilização para fins de medição e, se aplicável, de personalização;</li><li>em dispositivos Android recentes, sinais transmitidos através das API de privacidade publicitária do Android (Privacy Sandbox).</li></ul>
+<p>Estas informações são recolhidas e tratadas pela Google na qualidade de responsável pelo tratamento autónomo, nos termos da sua própria política: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>Consentimento: se residir no Espaço Económico Europeu, no Reino Unido ou na Suíça, é apresentado um formulário de consentimento no primeiro arranque. É livre de aceitar ou recusar a publicidade personalizada; a recusa não o impede de utilizar a Aplicação nem qualquer das suas funcionalidades. Nenhum dado dos seus cartões é alguma vez transmitido aos serviços publicitários.</p>
+<p>Pode alterar a qualquer momento as suas preferências de publicidade nas definições do seu dispositivo Android, em Privacidade e depois Anúncios (repor ou eliminar o identificador de publicidade).</p>
+<h3>5. PERMISSÕES SOLICITADAS</h3>
+<ul><li>Câmara: para fotografar os seus cartões.</li><li>Fotografias: para importar uma imagem existente da sua galeria.</li><li>Internet: para carregar o banner publicitário e abrir uma ligação externa no seu navegador (página de donativo).</li><li>Identificador de publicidade: utilizado pela Google AdMob para a difusão e medição dos anúncios.</li></ul>
+<p>Não é solicitada qualquer permissão de localização, contactos, microfone ou telefonia.</p>
+<h3>6. EXPORTAÇÃO, PARTILHA E CÓPIA DE SEGURANÇA</h3>
+<p>A Aplicação permite exportar os seus dados para um ficheiro JSON, ou gerar o PDF de um cartão para o partilhar. Estas operações são iniciadas apenas por si: escolhe o ficheiro, o destino e os destinatários. A BoninyDev não tem acesso nem a estes ficheiros nem ao seu conteúdo.</p>
+<p>Atenção: um ficheiro exportado contém as fotografias dos seus cartões sem cifragem. Guarde-o num local seguro e partilhe-o apenas com pessoas de confiança.</p>
+<h3>7. CONSERVAÇÃO E ELIMINAÇÃO</h3>
+<p>Os seus dados permanecem no seu dispositivo enquanto a Aplicação estiver instalada. A qualquer momento pode:</p>
+<ul><li>modificar ou eliminar um cartão (a eliminação apaga também as suas fotografias);</li><li>eliminar todos os cartões a partir das Definições;</li><li>desinstalar a Aplicação, o que apaga definitivamente todos os dados associados.</li></ul>
+<h3>8. SEGURANÇA</h3>
+<p>Os dados estão protegidos pela sandbox aplicacional do Android, que impede o acesso por outras aplicações. Recomenda-se vivamente que bloqueie o seu dispositivo (código, impressão digital, reconhecimento facial): qualquer pessoa que desbloqueie o seu telemóvel poderia consultar os seus cartões.</p>
+<h3>9. OS SEUS DIREITOS</h3>
+<p>Dispõe dos direitos de acesso, retificação, apagamento, limitação, oposição e portabilidade previstos no RGPD. Uma vez que a BoninyDev não conserva quaisquer dados a seu respeito num servidor, estes direitos são exercidos direta e imediatamente por si, localmente, através das funções de modificação, eliminação e exportação da Aplicação.</p>
+<p>Quanto aos dados tratados pela Google no âmbito da publicidade, estes direitos exercem-se junto da Google. Pode igualmente apresentar reclamação junto da autoridade de controlo do seu país de residência (em Portugal, a CNPD).</p>
+<h3>10. MENORES</h3>
+<p>A Aplicação não se destina a crianças com menos de 13 anos e não oferece qualquer função de comunicação, rede social ou de contacto. Pode ser utilizada por um menor, idealmente sob a supervisão de um progenitor ou tutor.</p>
+<h3>11. ALTERAÇÕES</h3>
+<p>A presente política pode evoluir para acompanhar as atualizações da Aplicação ou da regulamentação aplicável. A versão em vigor é a acessível a partir de Definições e depois Política de privacidade, bem como no seguinte endereço:</p>
+<p><a href="https://boninytel-dot.github.io/HandiCarte/">https://boninytel-dot.github.io/HandiCarte/</a></p>
+<h3>12. CONTACTO</h3>
+<p>Para qualquer questão relativa a esta política: contact@boninydev.com</p>
+    </div>
+    <div class="card">
+      <h2>Condições de utilização</h2>
+<p>Última atualização: 20 de setembro de 2026</p>
+<h3>1. EDITOR</h3>
+<p>A aplicação HandiCarte («a Aplicação») é desenvolvida e editada pela BoninyDev, programador independente estabelecido em França. Contacto: contact@boninydev.com</p>
+<p>As presentes Condições Gerais de Utilização («CGU») regem o acesso e a utilização da Aplicação.</p>
+<h3>2. OBJETO DA APLICAÇÃO</h3>
+<p>A HandiCarte é uma ferramenta que permite fotografar, organizar e consultar, para fins estritamente pessoais, cópias digitais de cartões ou documentos relacionados com a deficiência (cartão de estacionamento, atestados de incapacidade e equivalentes estrangeiros).</p>
+<h3>3. ACEITAÇÃO</h3>
+<p>A instalação e a utilização da Aplicação implicam a aceitação plena e sem reservas das presentes CGU e da Política de Privacidade. Se não as aceitar, não deve utilizar a Aplicação.</p>
+<h3>4. ⚠ ADVERTÊNCIA ESSENCIAL — OS CARTÕES DIGITAIS NÃO SÃO DOCUMENTOS OFICIAIS</h3>
+<p>4.1 A HandiCarte é exclusivamente uma ferramenta de armazenamento e consulta pessoais. As fotografias de cartões, dísticos, comprovativos ou documentos administrativos apresentadas na Aplicação NÃO CONSTITUEM EM CASO ALGUM DOCUMENTOS OFICIAIS e não são duplicados, cópias autenticadas nem equivalentes jurídicos dos documentos originais.</p>
+<p>4.2 Estas reproduções NÃO TÊM QUALQUER VALOR PROBATÓRIO, ADMINISTRATIVO OU LEGAL. Não vinculam os organismos emissores dos documentos originais nem a BoninyDev.</p>
+<p>4.3 O utilizador DEVE conservar e estar em condições de apresentar, a todo o momento, os cartões ou documentos ORIGINAIS no formato físico emitido pela autoridade ou organismo competente, nomeadamente quando a lei, um regulamento ou um terceiro (comércio, transporte, empregador, administração) o exija.</p>
+<p>4.4 A BoninyDev não poderá em caso algum ser responsabilizada:</p>
+<ul><li>pela recusa de um terceiro em aceitar uma reprodução digital apresentada na Aplicação em vez do documento original;</li><li>por qualquer consequência financeira, administrativa, jurídica ou outra decorrente da utilização, apresentação, perda ou impossibilidade de apresentar uma reprodução digital ou um documento original;</li><li>pela exatidão, validade, legibilidade, atualidade ou data de caducidade das informações fotografadas ou introduzidas pelo utilizador.</li></ul>
+<p>4.5 O utilizador é o único responsável pela veracidade, exatidão e atualização das informações que introduz ou fotografa, bem como pela utilização que delas faz, incluindo a decisão de apresentar uma reprodução digital a um terceiro.</p>
+<p>4.6 A Aplicação é um auxílio pessoal à consulta. Não substitui qualquer diligência administrativa, declaração, justificação legal ou obrigação que incumba ao utilizador.</p>
+<h3>5. UTILIZAÇÃO PESSOAL E LÍCITA</h3>
+<p>A Aplicação destina-se exclusivamente a uso pessoal. É proibido nela guardar documentos pertencentes a terceiros sem o seu acordo, bem como utilizar uma reprodução digital com o objetivo de obter indevidamente um direito, vantagem ou prestação. A utilização fraudulenta de um documento administrativo é punível criminalmente, sendo o utilizador o único responsável.</p>
+<h3>6. DISPONIBILIDADE E FUNCIONAMENTO</h3>
+<p>A gestão de cartões funciona sem ligação à Internet; apenas o banner publicitário requer ligação. A BoninyDev esforça-se por assegurar o bom funcionamento da Aplicação, mas não garante disponibilidade ininterrupta, ausência total de erros nem compatibilidade com todos os dispositivos e versões do Android.</p>
+<h3>7. PUBLICIDADE</h3>
+<p>A Aplicação é gratuita e financiada pela apresentação de um banner publicitário fornecido pela Google AdMob no ecrã inicial. Não é apresentada publicidade durante a consulta de um cartão. O conteúdo dos anúncios é selecionado pela Google e não pela BoninyDev, que não pode ser responsabilizada pelos produtos ou serviços promovidos. As modalidades de recolha de dados e de obtenção do consentimento são descritas na Política de Privacidade.</p>
+<h3>8. LIMITAÇÃO DE RESPONSABILIDADE</h3>
+<p>A Aplicação é fornecida «tal como está», sem garantia de qualquer tipo, expressa ou implícita. Na medida permitida pela lei aplicável, a BoninyDev não poderá ser responsabilizada:</p>
+<ul><li>pela perda, corrupção ou eliminação de dados resultante de uma desinstalação, atualização, avaria do dispositivo ou qualquer outra causa;</li><li>por qualquer dano direto ou indireto resultante da utilização, ou da impossibilidade de utilizar, a Aplicação.</li></ul>
+<p>Estando a cópia de segurança automática na nuvem desativada para proteger os seus dados de saúde, recomenda-se vivamente exportar regularmente os dados a partir do menu principal, em especial antes de mudar de telemóvel.</p>
+<p>Nenhuma disposição das presentes CGU afasta os direitos imperativos reconhecidos aos consumidores pela lei do seu país de residência, nem a responsabilidade da BoninyDev em caso de culpa grave, dolo ou dano à integridade física.</p>
+<h3>9. DONATIVO AO PROGRAMADOR</h3>
+<p>A Aplicação disponibiliza um botão que permite efetuar, numa base estritamente voluntária, um donativo ao programador através da plataforma terceira PayPal. Este donativo não confere qualquer contrapartida, funcionalidade adicional ou vantagem na Aplicação. Está sujeito às condições da PayPal, independentes da BoninyDev.</p>
+<h3>10. PROPRIEDADE INTELECTUAL</h3>
+<p>A Aplicação, o seu nome, logótipo, design, textos e código-fonte são propriedade da BoninyDev, com exceção dos componentes de terceiros utilizados sob licença de código aberto. É proibida qualquer reprodução, modificação ou distribuição não autorizada.</p>
+<h3>11. ALTERAÇÃO DAS CGU</h3>
+<p>A BoninyDev pode alterar as presentes CGU, nomeadamente para as adaptar à evolução da Aplicação ou da regulamentação. A versão aplicável é a acessível a partir de Definições e depois CGU. Em caso de alteração substancial, poderá ser solicitada nova aceitação.</p>
+<h3>12. LEI APLICÁVEL</h3>
+<p>As presentes CGU estão sujeitas ao direito francês. Na falta de resolução amigável, qualquer litígio será da competência dos tribunais franceses, sem prejuízo das normas imperativas aplicáveis aos consumidores no seu país de residência.</p>
+<h3>13. CONTACTO</h3>
+<p>Para qualquer questão relativa às presentes CGU: contact@boninydev.com</p>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>HandiCarte — éditée par BoninyDev — <a href="mailto:contact@boninydev.com">contact@boninydev.com</a></p>
+</footer>
+
+</body>
+</html>
